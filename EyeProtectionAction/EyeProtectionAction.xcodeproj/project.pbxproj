@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35A21FFB420342E5E1E9306D /* libPods-EyeProtectionAction.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7027C103036258A8241AF197 /* libPods-EyeProtectionAction.a */; };
+		4447722E229828260062AEDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4447722D229828260062AEDC /* AppDelegate.m */; };
+		44477231229828260062AEDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44477230229828260062AEDC /* ViewController.m */; };
+		44477234229828260062AEDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44477232229828260062AEDC /* Main.storyboard */; };
+		44477236229828280062AEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44477235229828280062AEDC /* Assets.xcassets */; };
+		44477239229828280062AEDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44477237229828280062AEDC /* LaunchScreen.storyboard */; };
+		4447723C229828280062AEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4447723B229828280062AEDC /* main.m */; };
+		44477246229828280062AEDC /* EyeProtectionActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44477245229828280062AEDC /* EyeProtectionActionTests.m */; };
+		44477251229828280062AEDC /* EyeProtectionActionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44477250229828280062AEDC /* EyeProtectionActionUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44477242229828280062AEDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44477221229828260062AEDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44477228229828260062AEDC;
+			remoteInfo = EyeProtectionAction;
+		};
+		4447724D229828280062AEDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44477221229828260062AEDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44477228229828260062AEDC;
+			remoteInfo = EyeProtectionAction;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		44477229229828260062AEDC /* EyeProtectionAction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeProtectionAction.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4447722C229828260062AEDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4447722D229828260062AEDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4447722F229828260062AEDC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		44477230229828260062AEDC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		44477233229828260062AEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44477235229828280062AEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44477238229828280062AEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4447723A229828280062AEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4447723B229828280062AEDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		44477241229828280062AEDC /* EyeProtectionActionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeProtectionActionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44477245229828280062AEDC /* EyeProtectionActionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeProtectionActionTests.m; sourceTree = "<group>"; };
+		44477247229828280062AEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4447724C229828280062AEDC /* EyeProtectionActionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeProtectionActionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44477250229828280062AEDC /* EyeProtectionActionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeProtectionActionUITests.m; sourceTree = "<group>"; };
+		44477252229828280062AEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7027C103036258A8241AF197 /* libPods-EyeProtectionAction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EyeProtectionAction.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C1655ED00EBA7D2915AD4AA /* Pods-EyeProtectionAction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeProtectionAction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction.debug.xcconfig"; sourceTree = "<group>"; };
+		7D151DD5C0AC372934661AB1 /* Pods-EyeProtectionAction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeProtectionAction.release.xcconfig"; path = "Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44477226229828260062AEDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35A21FFB420342E5E1E9306D /* libPods-EyeProtectionAction.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4447723E229828280062AEDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44477249229828280062AEDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44477220229828260062AEDC = {
+			isa = PBXGroup;
+			children = (
+				4447722B229828260062AEDC /* EyeProtectionAction */,
+				44477244229828280062AEDC /* EyeProtectionActionTests */,
+				4447724F229828280062AEDC /* EyeProtectionActionUITests */,
+				4447722A229828260062AEDC /* Products */,
+				B73952F3E94F73DADFA738FF /* Pods */,
+				BAA847F20194F913AB2BA596 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4447722A229828260062AEDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44477229229828260062AEDC /* EyeProtectionAction.app */,
+				44477241229828280062AEDC /* EyeProtectionActionTests.xctest */,
+				4447724C229828280062AEDC /* EyeProtectionActionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4447722B229828260062AEDC /* EyeProtectionAction */ = {
+			isa = PBXGroup;
+			children = (
+				4447722C229828260062AEDC /* AppDelegate.h */,
+				4447722D229828260062AEDC /* AppDelegate.m */,
+				4447722F229828260062AEDC /* ViewController.h */,
+				44477230229828260062AEDC /* ViewController.m */,
+				44477232229828260062AEDC /* Main.storyboard */,
+				44477235229828280062AEDC /* Assets.xcassets */,
+				44477237229828280062AEDC /* LaunchScreen.storyboard */,
+				4447723A229828280062AEDC /* Info.plist */,
+				4447723B229828280062AEDC /* main.m */,
+			);
+			path = EyeProtectionAction;
+			sourceTree = "<group>";
+		};
+		44477244229828280062AEDC /* EyeProtectionActionTests */ = {
+			isa = PBXGroup;
+			children = (
+				44477245229828280062AEDC /* EyeProtectionActionTests.m */,
+				44477247229828280062AEDC /* Info.plist */,
+			);
+			path = EyeProtectionActionTests;
+			sourceTree = "<group>";
+		};
+		4447724F229828280062AEDC /* EyeProtectionActionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				44477250229828280062AEDC /* EyeProtectionActionUITests.m */,
+				44477252229828280062AEDC /* Info.plist */,
+			);
+			path = EyeProtectionActionUITests;
+			sourceTree = "<group>";
+		};
+		B73952F3E94F73DADFA738FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C1655ED00EBA7D2915AD4AA /* Pods-EyeProtectionAction.debug.xcconfig */,
+				7D151DD5C0AC372934661AB1 /* Pods-EyeProtectionAction.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BAA847F20194F913AB2BA596 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7027C103036258A8241AF197 /* libPods-EyeProtectionAction.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44477228229828260062AEDC /* EyeProtectionAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44477255229828280062AEDC /* Build configuration list for PBXNativeTarget "EyeProtectionAction" */;
+			buildPhases = (
+				3CE87A379366C239FBA4325F /* [CP] Check Pods Manifest.lock */,
+				44477225229828260062AEDC /* Sources */,
+				44477226229828260062AEDC /* Frameworks */,
+				44477227229828260062AEDC /* Resources */,
+				DBAC78EF128720120AF0CC5D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EyeProtectionAction;
+			productName = EyeProtectionAction;
+			productReference = 44477229229828260062AEDC /* EyeProtectionAction.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44477240229828280062AEDC /* EyeProtectionActionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44477258229828280062AEDC /* Build configuration list for PBXNativeTarget "EyeProtectionActionTests" */;
+			buildPhases = (
+				4447723D229828280062AEDC /* Sources */,
+				4447723E229828280062AEDC /* Frameworks */,
+				4447723F229828280062AEDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44477243229828280062AEDC /* PBXTargetDependency */,
+			);
+			name = EyeProtectionActionTests;
+			productName = EyeProtectionActionTests;
+			productReference = 44477241229828280062AEDC /* EyeProtectionActionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4447724B229828280062AEDC /* EyeProtectionActionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4447725B229828280062AEDC /* Build configuration list for PBXNativeTarget "EyeProtectionActionUITests" */;
+			buildPhases = (
+				44477248229828280062AEDC /* Sources */,
+				44477249229828280062AEDC /* Frameworks */,
+				4447724A229828280062AEDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4447724E229828280062AEDC /* PBXTargetDependency */,
+			);
+			name = EyeProtectionActionUITests;
+			productName = EyeProtectionActionUITests;
+			productReference = 4447724C229828280062AEDC /* EyeProtectionActionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44477221229828260062AEDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = qxk;
+				TargetAttributes = {
+					44477228229828260062AEDC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					44477240229828280062AEDC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 44477228229828260062AEDC;
+					};
+					4447724B229828280062AEDC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 44477228229828260062AEDC;
+					};
+				};
+			};
+			buildConfigurationList = 44477224229828260062AEDC /* Build configuration list for PBXProject "EyeProtectionAction" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44477220229828260062AEDC;
+			productRefGroup = 4447722A229828260062AEDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44477228229828260062AEDC /* EyeProtectionAction */,
+				44477240229828280062AEDC /* EyeProtectionActionTests */,
+				4447724B229828280062AEDC /* EyeProtectionActionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44477227229828260062AEDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44477239229828280062AEDC /* LaunchScreen.storyboard in Resources */,
+				44477236229828280062AEDC /* Assets.xcassets in Resources */,
+				44477234229828260062AEDC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4447723F229828280062AEDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4447724A229828280062AEDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CE87A379366C239FBA4325F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EyeProtectionAction-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBAC78EF128720120AF0CC5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44477225229828260062AEDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44477231229828260062AEDC /* ViewController.m in Sources */,
+				4447723C229828280062AEDC /* main.m in Sources */,
+				4447722E229828260062AEDC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4447723D229828280062AEDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44477246229828280062AEDC /* EyeProtectionActionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44477248229828280062AEDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44477251229828280062AEDC /* EyeProtectionActionUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44477243229828280062AEDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44477228229828260062AEDC /* EyeProtectionAction */;
+			targetProxy = 44477242229828280062AEDC /* PBXContainerItemProxy */;
+		};
+		4447724E229828280062AEDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44477228229828260062AEDC /* EyeProtectionAction */;
+			targetProxy = 4447724D229828280062AEDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		44477232229828260062AEDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44477233229828260062AEDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		44477237229828280062AEDC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44477238229828280062AEDC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44477253229828280062AEDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		44477254229828280062AEDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44477256229828280062AEDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C1655ED00EBA7D2915AD4AA /* Pods-EyeProtectionAction.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EyeProtectionAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction.git.EyeProtectionAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44477257229828280062AEDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D151DD5C0AC372934661AB1 /* Pods-EyeProtectionAction.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EyeProtectionAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction.git.EyeProtectionAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44477259229828280062AEDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EyeProtectionActionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction.git.EyeProtectionActionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EyeProtectionAction.app/EyeProtectionAction";
+			};
+			name = Debug;
+		};
+		4447725A229828280062AEDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EyeProtectionActionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction.git.EyeProtectionActionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EyeProtectionAction.app/EyeProtectionAction";
+			};
+			name = Release;
+		};
+		4447725C229828280062AEDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EyeProtectionActionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction.git.EyeProtectionActionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EyeProtectionAction;
+			};
+			name = Debug;
+		};
+		4447725D229828280062AEDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EyeProtectionActionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction.git.EyeProtectionActionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EyeProtectionAction;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44477224229828260062AEDC /* Build configuration list for PBXProject "EyeProtectionAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44477253229828280062AEDC /* Debug */,
+				44477254229828280062AEDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44477255229828280062AEDC /* Build configuration list for PBXNativeTarget "EyeProtectionAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44477256229828280062AEDC /* Debug */,
+				44477257229828280062AEDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44477258229828280062AEDC /* Build configuration list for PBXNativeTarget "EyeProtectionActionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44477259229828280062AEDC /* Debug */,
+				4447725A229828280062AEDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4447725B229828280062AEDC /* Build configuration list for PBXNativeTarget "EyeProtectionActionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4447725C229828280062AEDC /* Debug */,
+				4447725D229828280062AEDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44477221229828260062AEDC /* Project object */;
+}
