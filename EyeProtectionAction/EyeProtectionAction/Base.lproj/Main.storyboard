@@ -65,27 +65,68 @@
         <!--视力检测工具-->
         <scene sceneID="Z65-H6-zKs">
             <objects>
-                <viewController id="MqB-ev-7ND" sceneMemberID="viewController">
+                <viewController id="MqB-ev-7ND" customClass="EyeSelectHeightViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="03k-hy-GWJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wt-4C-PWc">
-                                <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
+                                <rect key="frame" x="225" y="185.5" width="150" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="waZ-gx-5ds"/>
+                                </constraints>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-bu-YW5">
+                                <rect key="frame" x="157.5" y="284.5" width="37.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上下滑动刻度 选择您的身高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQd-oy-r5L">
+                                <rect key="frame" x="100" y="404.5" width="175.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1y-hc-v2D">
+                                <rect key="frame" x="30" y="471.5" width="315" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="waz-TT-9Vw"/>
+                                </constraints>
+                                <state key="normal" title="确定">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.28040550110000001" green="0.80264559719999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6wt-4C-PWc" firstAttribute="centerX" secondItem="03k-hy-GWJ" secondAttribute="centerX" id="1ds-7T-2fz"/>
-                            <constraint firstItem="6wt-4C-PWc" firstAttribute="centerY" secondItem="03k-hy-GWJ" secondAttribute="centerY" id="dC0-JK-5dH"/>
+                            <constraint firstItem="yQB-PS-KOS" firstAttribute="trailing" secondItem="6wt-4C-PWc" secondAttribute="trailing" id="521-O1-jya"/>
+                            <constraint firstItem="6wt-4C-PWc" firstAttribute="leading" secondItem="bQA-bu-YW5" secondAttribute="trailing" constant="30" id="9aG-z7-xHb"/>
+                            <constraint firstItem="T1y-hc-v2D" firstAttribute="top" secondItem="lQd-oy-r5L" secondAttribute="bottom" constant="50" id="Bjb-P8-CjE"/>
+                            <constraint firstItem="yQB-PS-KOS" firstAttribute="trailing" secondItem="T1y-hc-v2D" secondAttribute="trailing" constant="30" id="Vx5-FU-7AH"/>
+                            <constraint firstItem="bQA-bu-YW5" firstAttribute="centerY" secondItem="03k-hy-GWJ" secondAttribute="centerY" constant="-40" id="ZkR-IQ-ecb"/>
+                            <constraint firstItem="lQd-oy-r5L" firstAttribute="centerX" secondItem="03k-hy-GWJ" secondAttribute="centerX" id="fqs-Sj-Ep9"/>
+                            <constraint firstItem="lQd-oy-r5L" firstAttribute="bottom" secondItem="6wt-4C-PWc" secondAttribute="bottom" constant="20" id="kWq-Ef-Odp"/>
+                            <constraint firstItem="T1y-hc-v2D" firstAttribute="leading" secondItem="yQB-PS-KOS" secondAttribute="leading" constant="30" id="pt1-0M-kiX"/>
+                            <constraint firstItem="6wt-4C-PWc" firstAttribute="centerY" secondItem="03k-hy-GWJ" secondAttribute="centerY" constant="-40" id="vtz-vu-Tw5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yQB-PS-KOS"/>
                     </view>
                     <navigationItem key="navigationItem" title="视力检测工具" id="et5-KA-0Uz"/>
+                    <connections>
+                        <outlet property="selectHeightPickView" destination="6wt-4C-PWc" id="UQ2-Hw-EjS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSH-7a-9YX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="141"/>
+            <point key="canvasLocation" x="1968.8" y="140.77961019490255"/>
         </scene>
         <!--使用说明-->
         <scene sceneID="hEb-Tq-tUx">
