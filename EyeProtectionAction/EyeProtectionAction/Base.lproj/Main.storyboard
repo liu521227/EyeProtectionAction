@@ -75,6 +75,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="waZ-gx-5ds"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="MqB-ev-7ND" id="el0-Tk-fKO"/>
+                                    <outlet property="delegate" destination="MqB-ev-7ND" id="unF-09-L6K"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-bu-YW5">
                                 <rect key="frame" x="157.5" y="284.5" width="37.5" height="18"/>
@@ -122,6 +126,7 @@
                     <navigationItem key="navigationItem" title="视力检测工具" id="et5-KA-0Uz"/>
                     <connections>
                         <outlet property="selectHeightPickView" destination="6wt-4C-PWc" id="UQ2-Hw-EjS"/>
+                        <outlet property="titleL" destination="bQA-bu-YW5" id="jEu-zY-ZaQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSH-7a-9YX" userLabel="First Responder" sceneMemberID="firstResponder"/>
