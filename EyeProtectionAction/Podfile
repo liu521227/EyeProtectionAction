@@ -6,8 +6,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 def shared_pods
   pod 'AFNetworking'  
   pod 'Masonry'
-  pod 'SDWebImage'
-  pod 'IQKeyboardManager'
+  pod 'PGDatePicker'
 end
 
 target 'EyeProtectionAction' do

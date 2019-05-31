@@ -18,6 +18,8 @@
 		44477251229828280062AEDC /* EyeProtectionActionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44477250229828280062AEDC /* EyeProtectionActionUITests.m */; };
 		448DD8BE22994D20003673EA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8BD22994D20003673EA /* BaseViewController.m */; };
 		448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */; };
+		44FFEB0A22A11B4300A0C07D /* EyeInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FFEB0922A11B4300A0C07D /* EyeInstructionsViewController.m */; };
+		44FFEB0D22A11B9200A0C07D /* EyePreparationTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FFEB0C22A11B9200A0C07D /* EyePreparationTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		448DD8BD22994D20003673EA /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		448DD8BF22994D5A003673EA /* EyeSelectHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeSelectHeightViewController.h; sourceTree = "<group>"; };
 		448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeSelectHeightViewController.m; sourceTree = "<group>"; };
+		44FFEB0822A11B4300A0C07D /* EyeInstructionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeInstructionsViewController.h; sourceTree = "<group>"; };
+		44FFEB0922A11B4300A0C07D /* EyeInstructionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeInstructionsViewController.m; sourceTree = "<group>"; };
+		44FFEB0B22A11B9200A0C07D /* EyePreparationTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyePreparationTestViewController.h; sourceTree = "<group>"; };
+		44FFEB0C22A11B9200A0C07D /* EyePreparationTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyePreparationTestViewController.m; sourceTree = "<group>"; };
 		7027C103036258A8241AF197 /* libPods-EyeProtectionAction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EyeProtectionAction.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1655ED00EBA7D2915AD4AA /* Pods-EyeProtectionAction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeProtectionAction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction.debug.xcconfig"; sourceTree = "<group>"; };
 		7D151DD5C0AC372934661AB1 /* Pods-EyeProtectionAction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeProtectionAction.release.xcconfig"; path = "Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +128,10 @@
 				448DD8BD22994D20003673EA /* BaseViewController.m */,
 				448DD8BF22994D5A003673EA /* EyeSelectHeightViewController.h */,
 				448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */,
+				44FFEB0822A11B4300A0C07D /* EyeInstructionsViewController.h */,
+				44FFEB0922A11B4300A0C07D /* EyeInstructionsViewController.m */,
+				44FFEB0B22A11B9200A0C07D /* EyePreparationTestViewController.h */,
+				44FFEB0C22A11B9200A0C07D /* EyePreparationTestViewController.m */,
 				44477232229828260062AEDC /* Main.storyboard */,
 				44477235229828280062AEDC /* Assets.xcassets */,
 				44477237229828280062AEDC /* LaunchScreen.storyboard */,
@@ -325,13 +335,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources.sh",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/PGDatePicker/PGDatePicker/PGDatePicker.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PGDatePicker.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -348,6 +358,8 @@
 				448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */,
 				44477231229828260062AEDC /* ViewController.m in Sources */,
 				448DD8BE22994D20003673EA /* BaseViewController.m in Sources */,
+				44FFEB0A22A11B4300A0C07D /* EyeInstructionsViewController.m in Sources */,
+				44FFEB0D22A11B9200A0C07D /* EyePreparationTestViewController.m in Sources */,
 				4447723C229828280062AEDC /* main.m in Sources */,
 				4447722E229828260062AEDC /* AppDelegate.m in Sources */,
 			);

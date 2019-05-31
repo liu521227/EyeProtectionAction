@@ -7,11 +7,12 @@
 //
 
 #import "EyeSelectHeightViewController.h"
+#import <PGPickerView/PGPickerView.h>
 
-@interface EyeSelectHeightViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
-@property (weak, nonatomic) IBOutlet UIPickerView *selectHeightPickView;
+@interface EyeSelectHeightViewController ()<PGPickerViewDataSource,PGPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleL;
 @property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) PGPickerView *pgPickerView;
 @end
 
 @implementation EyeSelectHeightViewController
@@ -24,34 +25,53 @@
     return _dataArr;
 }
 
+- (PGPickerView *)pgPickerView
+{
+    if (!_pgPickerView) {
+        _pgPickerView = [PGPickerView new];
+        _pgPickerView.backgroundColor = [UIColor orangeColor];
+        _pgPickerView.delegate = self;
+        _pgPickerView.dataSource = self;
+        [self.view addSubview:_pgPickerView];
+    }
+    return _pgPickerView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationController.navigationBarHidden = NO;
+
     for (NSInteger i = 80; i<= 220; i++) {
         [self.dataArr addObject:[NSString stringWithFormat:@"%ldcm",i]];
     }
-    [self.selectHeightPickView selectRow:98 inComponent:0 animated:YES];
-    [self pickerView:self.selectHeightPickView didSelectRow:98 inComponent:0];
+    [self.pgPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(92);
+        make.right.mas_equalTo(0);
+        make.height.mas_equalTo(380);
+        make.width.mas_equalTo(100);
+    }];
+    [self.pgPickerView selectRow:98 inComponent:0 animated:YES];
+    [self pickerView:self.pgPickerView didSelectRow:98 inComponent:0];
 
 }
 
 
-- (NSInteger)numberOfComponentsInPickerView:(nonnull UIPickerView *)pickerView {
+- (NSInteger)numberOfComponentsInPickerView:(nonnull PGPickerView *)pickerView {
     return 1;
 }
 
-- (NSInteger)pickerView:(nonnull UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+- (NSInteger)pickerView:(nonnull PGPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return self.dataArr.count;
 }
 
 //列显示的数据
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger) row forComponent:(NSInteger)component {
+- (NSString *)pickerView:(PGPickerView *)pickerView titleForRow:(NSInteger) row forComponent:(NSInteger)component {
     return self.dataArr[row];
 }
 
 #pragma mark - delegate
 // 选中某一组的某一行
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+- (void)pickerView:(PGPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     self.titleL.text = self.dataArr[row];
 }
 

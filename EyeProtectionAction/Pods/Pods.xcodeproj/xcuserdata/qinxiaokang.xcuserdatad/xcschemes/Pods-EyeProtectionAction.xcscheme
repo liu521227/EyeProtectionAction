@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5CCE8B1B9871C53C7CD7205D419C08C"
+               BlueprintIdentifier = "E20A25226E53122FA03F4730AACBAE04"
                BuildableName = "libPods-EyeProtectionAction.a"
                BlueprintName = "Pods-EyeProtectionAction"
                ReferencedContainer = "container:Pods.xcodeproj">
