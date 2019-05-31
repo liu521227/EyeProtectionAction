@@ -96,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="132.68365817091455"/>
         </scene>
-        <!--视力检测工具-->
+        <!--Instructions-->
         <scene sceneID="Z65-H6-zKs">
             <objects>
                 <viewController id="MqB-ev-7ND" customClass="EyeSelectHeightViewController" sceneMemberID="viewController">
@@ -104,68 +104,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wt-4C-PWc">
-                                <rect key="frame" x="225" y="185.5" width="150" height="216"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="TVF-Do-X93">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectHeight" translatesAutoresizingMaskIntoConstraints="NO" id="91L-9z-COl">
+                                <rect key="frame" x="0.0" y="97" width="375" height="380"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="waZ-gx-5ds"/>
+                                    <constraint firstAttribute="height" constant="380" id="Z9m-vw-E4g"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="MqB-ev-7ND" id="el0-Tk-fKO"/>
-                                    <outlet property="delegate" destination="MqB-ev-7ND" id="unF-09-L6K"/>
-                                </connections>
-                            </pickerView>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-bu-YW5">
-                                <rect key="frame" x="157.5" y="284.5" width="37.5" height="18"/>
+                                <rect key="frame" x="140" y="257" width="73" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="PtG-Bw-ZzD"/>
+                                    <constraint firstAttribute="height" constant="29" id="Y04-4o-H6b"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上下滑动刻度 选择您的身高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQd-oy-r5L">
-                                <rect key="frame" x="100" y="404.5" width="175.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sliding scale up and down to choose your height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQd-oy-r5L">
+                                <rect key="frame" x="20" y="502" width="335" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1y-hc-v2D">
-                                <rect key="frame" x="30" y="471.5" width="315" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c49-P2-wpJ">
+                                <rect key="frame" x="66" y="556" width="243" height="45"/>
+                                <color key="backgroundColor" red="0.72549019607843135" green="0.80784313725490198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="waz-TT-9Vw"/>
+                                    <constraint firstAttribute="height" constant="45" id="rnZ-N9-gnS"/>
                                 </constraints>
-                                <state key="normal" title="确定">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Sure?"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="22"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="bg2-pd-vJn" kind="push" id="TOX-qo-obu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28040550110000001" green="0.80264559719999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="yQB-PS-KOS" firstAttribute="trailing" secondItem="6wt-4C-PWc" secondAttribute="trailing" id="521-O1-jya"/>
-                            <constraint firstItem="6wt-4C-PWc" firstAttribute="leading" secondItem="bQA-bu-YW5" secondAttribute="trailing" constant="30" id="9aG-z7-xHb"/>
-                            <constraint firstItem="T1y-hc-v2D" firstAttribute="top" secondItem="lQd-oy-r5L" secondAttribute="bottom" constant="50" id="Bjb-P8-CjE"/>
-                            <constraint firstItem="yQB-PS-KOS" firstAttribute="trailing" secondItem="T1y-hc-v2D" secondAttribute="trailing" constant="30" id="Vx5-FU-7AH"/>
-                            <constraint firstItem="bQA-bu-YW5" firstAttribute="centerY" secondItem="03k-hy-GWJ" secondAttribute="centerY" constant="-40" id="ZkR-IQ-ecb"/>
-                            <constraint firstItem="lQd-oy-r5L" firstAttribute="centerX" secondItem="03k-hy-GWJ" secondAttribute="centerX" id="fqs-Sj-Ep9"/>
-                            <constraint firstItem="lQd-oy-r5L" firstAttribute="bottom" secondItem="6wt-4C-PWc" secondAttribute="bottom" constant="20" id="kWq-Ef-Odp"/>
-                            <constraint firstItem="T1y-hc-v2D" firstAttribute="leading" secondItem="yQB-PS-KOS" secondAttribute="leading" constant="30" id="pt1-0M-kiX"/>
-                            <constraint firstItem="6wt-4C-PWc" firstAttribute="centerY" secondItem="03k-hy-GWJ" secondAttribute="centerY" constant="-40" id="vtz-vu-Tw5"/>
+                            <constraint firstItem="bQA-bu-YW5" firstAttribute="leading" secondItem="yQB-PS-KOS" secondAttribute="leading" constant="140" id="6zd-kH-urb"/>
+                            <constraint firstItem="91L-9z-COl" firstAttribute="leading" secondItem="yQB-PS-KOS" secondAttribute="leading" id="ARb-sf-VB4"/>
+                            <constraint firstItem="TVF-Do-X93" firstAttribute="top" secondItem="03k-hy-GWJ" secondAttribute="top" id="Eiv-1I-hiE"/>
+                            <constraint firstItem="91L-9z-COl" firstAttribute="top" secondItem="yQB-PS-KOS" secondAttribute="top" constant="33" id="Fn8-wP-Aev"/>
+                            <constraint firstItem="yQB-PS-KOS" firstAttribute="trailing" secondItem="91L-9z-COl" secondAttribute="trailing" id="KEU-gp-iWx"/>
+                            <constraint firstItem="c49-P2-wpJ" firstAttribute="leading" secondItem="yQB-PS-KOS" secondAttribute="leading" constant="66" id="Lc3-TD-bTo"/>
+                            <constraint firstItem="yQB-PS-KOS" firstAttribute="trailing" secondItem="c49-P2-wpJ" secondAttribute="trailing" constant="66" id="Od5-hZ-QYj"/>
+                            <constraint firstItem="lQd-oy-r5L" firstAttribute="leading" secondItem="yQB-PS-KOS" secondAttribute="leading" constant="20" id="Yjn-JY-3r1"/>
+                            <constraint firstItem="bQA-bu-YW5" firstAttribute="top" secondItem="yQB-PS-KOS" secondAttribute="top" constant="193" id="am2-Dc-SaS"/>
+                            <constraint firstItem="yQB-PS-KOS" firstAttribute="bottom" secondItem="c49-P2-wpJ" secondAttribute="bottom" constant="66" id="jcc-oV-VNa"/>
+                            <constraint firstAttribute="bottom" secondItem="TVF-Do-X93" secondAttribute="bottom" id="lyD-NE-AUG"/>
+                            <constraint firstAttribute="trailing" secondItem="TVF-Do-X93" secondAttribute="trailing" id="nQd-XP-nXB"/>
+                            <constraint firstItem="c49-P2-wpJ" firstAttribute="top" secondItem="lQd-oy-r5L" secondAttribute="bottom" constant="37" id="sBI-SP-K45"/>
+                            <constraint firstItem="yQB-PS-KOS" firstAttribute="trailing" secondItem="lQd-oy-r5L" secondAttribute="trailing" constant="20" id="xeF-Rh-SrT"/>
+                            <constraint firstItem="TVF-Do-X93" firstAttribute="leading" secondItem="yQB-PS-KOS" secondAttribute="leading" id="yBA-Lj-mna"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yQB-PS-KOS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="视力检测工具" id="et5-KA-0Uz"/>
+                    <navigationItem key="navigationItem" title="Instructions" id="et5-KA-0Uz"/>
                     <connections>
-                        <outlet property="selectHeightPickView" destination="6wt-4C-PWc" id="UQ2-Hw-EjS"/>
                         <outlet property="titleL" destination="bQA-bu-YW5" id="jEu-zY-ZaQ"/>
+                        <outlet property="titleLeft" destination="6zd-kH-urb" id="GVM-yl-jaX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSH-7a-9YX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968.8" y="140.77961019490255"/>
+            <point key="canvasLocation" x="1968.8" y="139.880059970015"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="hEb-Tq-tUx">
@@ -259,6 +267,22 @@
             </objects>
             <point key="canvasLocation" x="1124" y="871.21439280359823"/>
         </scene>
+        <!--PreparationTest-->
+        <scene sceneID="zI3-Fv-BCc">
+            <objects>
+                <viewController id="bg2-pd-vJn" customClass="EyePreparationTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uzv-Fq-bLu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0Lm-Ng-82h"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PreparationTest" id="SRI-Om-ZAh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFb-jg-ci7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969" y="941"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="koX-6d-SkZ">
             <objects>
@@ -279,6 +303,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SelectHeight" width="321" height="380"/>
         <image name="bg" width="375" height="667"/>
         <image name="eye" width="86" height="94"/>
         <image name="ren" width="192.5" height="164.5"/>

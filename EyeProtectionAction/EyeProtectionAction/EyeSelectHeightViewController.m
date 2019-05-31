@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleL;
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @property (nonatomic, strong) PGPickerView *pgPickerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleLeft;
 @end
 
 @implementation EyeSelectHeightViewController
