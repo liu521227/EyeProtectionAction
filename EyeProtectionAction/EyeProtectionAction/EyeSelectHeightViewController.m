@@ -30,7 +30,11 @@
 {
     if (!_pgPickerView) {
         _pgPickerView = [PGPickerView new];
-        _pgPickerView.backgroundColor = [UIColor orangeColor];
+        _pgPickerView.rowHeight = 38;
+        _pgPickerView.textFontOfOtherRow = [UIFont systemFontOfSize:15];
+        _pgPickerView.textColorOfOtherRow = [UIColor whiteColor];
+        _pgPickerView.textFontOfSelectedRow = [UIFont systemFontOfSize:15];
+        _pgPickerView.textColorOfSelectedRow = [UIColor whiteColor];
         _pgPickerView.delegate = self;
         _pgPickerView.dataSource = self;
         [self.view addSubview:_pgPickerView];
@@ -42,17 +46,19 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
 
+    self.titleLeft.constant = E_Scale_Value(145);
+    
     for (NSInteger i = 80; i<= 220; i++) {
         [self.dataArr addObject:[NSString stringWithFormat:@"%ldcm",i]];
     }
     [self.pgPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(92);
+        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(40);
         make.right.mas_equalTo(0);
-        make.height.mas_equalTo(380);
-        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(342);
+        make.width.mas_equalTo(150);
     }];
-    [self.pgPickerView selectRow:98 inComponent:0 animated:YES];
-    [self pickerView:self.pgPickerView didSelectRow:98 inComponent:0];
+//    [self.pgPickerView selectRow:98 inComponent:0 animated:YES];
+//    [self pickerView:self.pgPickerView didSelectRow:98 inComponent:0];
 
 }
 
