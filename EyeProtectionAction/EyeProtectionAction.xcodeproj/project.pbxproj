@@ -16,6 +16,7 @@
 		4447723C229828280062AEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4447723B229828280062AEDC /* main.m */; };
 		44477246229828280062AEDC /* EyeProtectionActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44477245229828280062AEDC /* EyeProtectionActionTests.m */; };
 		44477251229828280062AEDC /* EyeProtectionActionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44477250229828280062AEDC /* EyeProtectionActionUITests.m */; };
+		44884E3522A53FB00033FBB9 /* EyeStartTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E3422A53FB00033FBB9 /* EyeStartTestViewController.m */; };
 		448DD8BE22994D20003673EA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8BD22994D20003673EA /* BaseViewController.m */; };
 		448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */; };
 		44FFEB0A22A11B4300A0C07D /* EyeInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FFEB0922A11B4300A0C07D /* EyeInstructionsViewController.m */; };
@@ -56,6 +57,8 @@
 		4447724C229828280062AEDC /* EyeProtectionActionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeProtectionActionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44477250229828280062AEDC /* EyeProtectionActionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeProtectionActionUITests.m; sourceTree = "<group>"; };
 		44477252229828280062AEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44884E3322A53FB00033FBB9 /* EyeStartTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeStartTestViewController.h; sourceTree = "<group>"; };
+		44884E3422A53FB00033FBB9 /* EyeStartTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeStartTestViewController.m; sourceTree = "<group>"; };
 		448DD8BC22994D20003673EA /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		448DD8BD22994D20003673EA /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		448DD8BF22994D5A003673EA /* EyeSelectHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeSelectHeightViewController.h; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				44FFEB0922A11B4300A0C07D /* EyeInstructionsViewController.m */,
 				44FFEB0B22A11B9200A0C07D /* EyePreparationTestViewController.h */,
 				44FFEB0C22A11B9200A0C07D /* EyePreparationTestViewController.m */,
+				44884E3322A53FB00033FBB9 /* EyeStartTestViewController.h */,
+				44884E3422A53FB00033FBB9 /* EyeStartTestViewController.m */,
 				44477232229828260062AEDC /* Main.storyboard */,
 				44477235229828280062AEDC /* Assets.xcassets */,
 				44477237229828280062AEDC /* LaunchScreen.storyboard */,
@@ -362,6 +367,7 @@
 				44FFEB0D22A11B9200A0C07D /* EyePreparationTestViewController.m in Sources */,
 				4447723C229828280062AEDC /* main.m in Sources */,
 				4447722E229828260062AEDC /* AppDelegate.m in Sources */,
+				44884E3522A53FB00033FBB9 /* EyeStartTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

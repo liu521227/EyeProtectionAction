@@ -265,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AA-2O-abk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="871.21439280359823"/>
+            <point key="canvasLocation" x="1079" y="918"/>
         </scene>
         <!--PreparationTest-->
         <scene sceneID="zI3-Fv-BCc">
@@ -274,7 +274,33 @@
                     <view key="view" contentMode="scaleToFill" id="Uzv-Fq-bLu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="tKF-TY-aIj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7N-xh-WnV">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="GAD-Nf-pYQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="aFM-EL-XtO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <segue destination="Wi6-vQ-aUg" kind="push" id="sMQ-Oy-Nqs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="m7N-xh-WnV" firstAttribute="centerY" secondItem="Uzv-Fq-bLu" secondAttribute="centerY" id="0JO-kg-zii"/>
+                            <constraint firstAttribute="bottom" secondItem="tKF-TY-aIj" secondAttribute="bottom" id="9H2-ON-Kt6"/>
+                            <constraint firstItem="0Lm-Ng-82h" firstAttribute="trailing" secondItem="tKF-TY-aIj" secondAttribute="trailing" id="HGY-gh-hLl"/>
+                            <constraint firstItem="m7N-xh-WnV" firstAttribute="centerX" secondItem="Uzv-Fq-bLu" secondAttribute="centerX" id="UMQ-rl-PSh"/>
+                            <constraint firstItem="tKF-TY-aIj" firstAttribute="leading" secondItem="0Lm-Ng-82h" secondAttribute="leading" id="UgF-SY-F2G"/>
+                            <constraint firstItem="tKF-TY-aIj" firstAttribute="top" secondItem="Uzv-Fq-bLu" secondAttribute="top" id="g0j-AU-1DY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Lm-Ng-82h"/>
                     </view>
                     <navigationItem key="navigationItem" title="PreparationTest" id="SRI-Om-ZAh"/>
@@ -282,6 +308,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFb-jg-ci7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1969" y="941"/>
+        </scene>
+        <!--Current view-->
+        <scene sceneID="6JE-Gk-bv7">
+            <objects>
+                <viewController id="Wi6-vQ-aUg" customClass="EyeStartTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ST0-Gk-Yrq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="rHF-6C-SEc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8O-3G-eOV">
+                                <rect key="frame" x="21" y="74" width="333" height="191"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="awa-1i-je9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="191" id="t7Y-Fh-kEu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X8O-3G-eOV" firstAttribute="top" secondItem="Vl6-Es-3XV" secondAttribute="top" constant="10" id="9BU-tu-ZrJ"/>
+                            <constraint firstAttribute="trailing" secondItem="rHF-6C-SEc" secondAttribute="trailing" id="CAm-Ka-iIG"/>
+                            <constraint firstItem="X8O-3G-eOV" firstAttribute="leading" secondItem="Vl6-Es-3XV" secondAttribute="leading" constant="21" id="NH1-bJ-rhJ"/>
+                            <constraint firstItem="rHF-6C-SEc" firstAttribute="top" secondItem="ST0-Gk-Yrq" secondAttribute="top" id="a58-8m-dZY"/>
+                            <constraint firstItem="rHF-6C-SEc" firstAttribute="leading" secondItem="Vl6-Es-3XV" secondAttribute="leading" id="bHr-hd-2k2"/>
+                            <constraint firstItem="Vl6-Es-3XV" firstAttribute="trailing" secondItem="X8O-3G-eOV" secondAttribute="trailing" constant="21" id="nIE-dk-2W3"/>
+                            <constraint firstAttribute="bottom" secondItem="rHF-6C-SEc" secondAttribute="bottom" id="tbW-Vm-rOf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vl6-Es-3XV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Current view" id="qwv-rZ-TBu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRo-bF-ZTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2834" y="940"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="koX-6d-SkZ">
