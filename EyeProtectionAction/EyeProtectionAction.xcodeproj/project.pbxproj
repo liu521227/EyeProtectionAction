@@ -17,6 +17,11 @@
 		44477246229828280062AEDC /* EyeProtectionActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44477245229828280062AEDC /* EyeProtectionActionTests.m */; };
 		44477251229828280062AEDC /* EyeProtectionActionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44477250229828280062AEDC /* EyeProtectionActionUITests.m */; };
 		44884E3522A53FB00033FBB9 /* EyeStartTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E3422A53FB00033FBB9 /* EyeStartTestViewController.m */; };
+		44884E4122A61EF00033FBB9 /* MLDemoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E3722A61EF00033FBB9 /* MLDemoItem.m */; };
+		44884E4222A61EF00033FBB9 /* MLDemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E3C22A61EF00033FBB9 /* MLDemoModel.m */; };
+		44884E4322A61EF00033FBB9 /* JXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E3E22A61EF00033FBB9 /* JXButton.m */; };
+		44884E4422A61EF00033FBB9 /* MLPickerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E3F22A61EF00033FBB9 /* MLPickerScrollView.m */; };
+		44884E4522A61EF00033FBB9 /* MLPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E4022A61EF00033FBB9 /* MLPickerItem.m */; };
 		448DD8BE22994D20003673EA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8BD22994D20003673EA /* BaseViewController.m */; };
 		448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */; };
 		44FFEB0A22A11B4300A0C07D /* EyeInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FFEB0922A11B4300A0C07D /* EyeInstructionsViewController.m */; };
@@ -59,6 +64,16 @@
 		44477252229828280062AEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44884E3322A53FB00033FBB9 /* EyeStartTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeStartTestViewController.h; sourceTree = "<group>"; };
 		44884E3422A53FB00033FBB9 /* EyeStartTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeStartTestViewController.m; sourceTree = "<group>"; };
+		44884E3722A61EF00033FBB9 /* MLDemoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLDemoItem.m; sourceTree = "<group>"; };
+		44884E3822A61EF00033FBB9 /* MLDemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLDemoModel.h; sourceTree = "<group>"; };
+		44884E3922A61EF00033FBB9 /* MLPickerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPickerScrollView.h; sourceTree = "<group>"; };
+		44884E3A22A61EF00033FBB9 /* JXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXButton.h; sourceTree = "<group>"; };
+		44884E3B22A61EF00033FBB9 /* MLPickerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPickerItem.h; sourceTree = "<group>"; };
+		44884E3C22A61EF00033FBB9 /* MLDemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLDemoModel.m; sourceTree = "<group>"; };
+		44884E3D22A61EF00033FBB9 /* MLDemoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLDemoItem.h; sourceTree = "<group>"; };
+		44884E3E22A61EF00033FBB9 /* JXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXButton.m; sourceTree = "<group>"; };
+		44884E3F22A61EF00033FBB9 /* MLPickerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPickerScrollView.m; sourceTree = "<group>"; };
+		44884E4022A61EF00033FBB9 /* MLPickerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPickerItem.m; sourceTree = "<group>"; };
 		448DD8BC22994D20003673EA /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		448DD8BD22994D20003673EA /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		448DD8BF22994D5A003673EA /* EyeSelectHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeSelectHeightViewController.h; sourceTree = "<group>"; };
@@ -123,6 +138,7 @@
 		4447722B229828260062AEDC /* EyeProtectionAction */ = {
 			isa = PBXGroup;
 			children = (
+				44884E3622A61EF00033FBB9 /* pickView */,
 				4447722C229828260062AEDC /* AppDelegate.h */,
 				4447722D229828260062AEDC /* AppDelegate.m */,
 				4447722F229828260062AEDC /* ViewController.h */,
@@ -162,6 +178,23 @@
 				44477252229828280062AEDC /* Info.plist */,
 			);
 			path = EyeProtectionActionUITests;
+			sourceTree = "<group>";
+		};
+		44884E3622A61EF00033FBB9 /* pickView */ = {
+			isa = PBXGroup;
+			children = (
+				44884E3822A61EF00033FBB9 /* MLDemoModel.h */,
+				44884E3C22A61EF00033FBB9 /* MLDemoModel.m */,
+				44884E3D22A61EF00033FBB9 /* MLDemoItem.h */,
+				44884E3722A61EF00033FBB9 /* MLDemoItem.m */,
+				44884E3A22A61EF00033FBB9 /* JXButton.h */,
+				44884E3E22A61EF00033FBB9 /* JXButton.m */,
+				44884E3922A61EF00033FBB9 /* MLPickerScrollView.h */,
+				44884E3F22A61EF00033FBB9 /* MLPickerScrollView.m */,
+				44884E3B22A61EF00033FBB9 /* MLPickerItem.h */,
+				44884E4022A61EF00033FBB9 /* MLPickerItem.m */,
+			);
+			path = pickView;
 			sourceTree = "<group>";
 		};
 		B73952F3E94F73DADFA738FF /* Pods */ = {
@@ -361,13 +394,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */,
+				44884E4322A61EF00033FBB9 /* JXButton.m in Sources */,
 				44477231229828260062AEDC /* ViewController.m in Sources */,
 				448DD8BE22994D20003673EA /* BaseViewController.m in Sources */,
+				44884E4422A61EF00033FBB9 /* MLPickerScrollView.m in Sources */,
 				44FFEB0A22A11B4300A0C07D /* EyeInstructionsViewController.m in Sources */,
 				44FFEB0D22A11B9200A0C07D /* EyePreparationTestViewController.m in Sources */,
+				44884E4222A61EF00033FBB9 /* MLDemoModel.m in Sources */,
 				4447723C229828280062AEDC /* main.m in Sources */,
+				44884E4122A61EF00033FBB9 /* MLDemoItem.m in Sources */,
 				4447722E229828260062AEDC /* AppDelegate.m in Sources */,
 				44884E3522A53FB00033FBB9 /* EyeStartTestViewController.m in Sources */,
+				44884E4522A61EF00033FBB9 /* MLPickerItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
