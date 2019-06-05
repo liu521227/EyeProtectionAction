@@ -18,6 +18,12 @@
 @property (nonatomic, strong) NSMutableArray *decimalData;
 @property (nonatomic, strong) NSMutableArray *pointsData;
 @property (weak, nonatomic) IBOutlet UILabel *selectTextL;
+@property (weak, nonatomic) IBOutlet UIButton *decimalBtn;
+@property (weak, nonatomic) IBOutlet UIButton *pointsBtn;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *pointsTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *pointsHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *decimalTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *decimalHeight;
 
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @end
@@ -52,6 +58,9 @@
     [super viewDidLoad];
     self.bgView.layer.borderWidth = 2;
     self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.decimalBtn.layer.borderWidth = 2;
+    self.decimalBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    
     
     NSArray *decimalTitleArray = @[@"4.0",@"4.1",@"4.2",@"4.3",@"4.4",@"4.5",@"4.6",@"4.7",@"4.8",@"4.9",@"5.0",@"5.1",@"5.2",@"5.3"];
     NSArray *pointsTitleArray1 = @[@"0.1",@"0.12",@"0.15",@"0.2",@"0.25",@"0.3",@"0.4",@"0.5",@"0.6",@"0.8",@"1.0",@"1.2",@"1.5",@"2.0"];
@@ -86,6 +95,43 @@
     _pickerScollView.seletedIndex = 3;
     [_pickerScollView scollToSelectdIndex:3];
 }
+- (IBAction)clickDecimalBtn:(UIButton *)sender {
+    [sender setTitleEdgeInsets:(UIEdgeInsetsMake(10, 0, 0, 0))];
+    [self.pointsBtn setTitleEdgeInsets:(UIEdgeInsetsMake(0, 0, 0, 0))];
+    [sender setTitleColor:RGBA(15, 40, 120, 1) forState:(UIControlStateNormal)];
+    [self.pointsBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    self.pointsTop.constant = 30;
+    self.pointsHeight.constant = 44;
+    self.decimalTop.constant = 20;
+    self.decimalHeight.constant = 54;
+    self.decimalBtn.layer.borderWidth = 0;
+    self.decimalBtn.layer.masksToBounds = NO;
+    self.pointsBtn.layer.cornerRadius = 7;
+    self.pointsBtn.layer.masksToBounds = YES;
+    self.pointsBtn.layer.borderWidth = 2;
+    self.pointsBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.decimalBtn setBackgroundImage:[UIImage imageNamed:@"switchover"] forState:(UIControlStateNormal)];
+    [self.pointsBtn setBackgroundImage:[UIImage imageNamed:@""] forState:(UIControlStateNormal)];
+
+}
+- (IBAction)clickPointsBtn:(UIButton *)sender {
+    [sender setTitleEdgeInsets:(UIEdgeInsetsMake(10, 0, 0, 0))];
+    [sender setTitleColor:RGBA(15, 40, 120, 1) forState:(UIControlStateNormal)];
+    [self.decimalBtn setTitleEdgeInsets:(UIEdgeInsetsMake(0, 0, 0, 0))];
+    [self.decimalBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    self.pointsTop.constant = 20;
+    self.pointsHeight.constant = 54;
+    self.decimalTop.constant = 30;
+    self.decimalHeight.constant = 44;
+    self.pointsBtn.layer.borderWidth = 0;
+    self.pointsBtn.layer.masksToBounds = NO;
+    self.decimalBtn.layer.cornerRadius = 7;
+    self.decimalBtn.layer.masksToBounds = YES;
+    self.decimalBtn.layer.borderWidth = 2;
+    self.decimalBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.pointsBtn setBackgroundImage:[UIImage imageNamed:@"switchover"] forState:(UIControlStateNormal)];
+    [self.decimalBtn setBackgroundImage:[UIImage imageNamed:@""] forState:(UIControlStateNormal)];
+}
 
 #pragma mark - dataSource
 - (NSInteger)numberOfItemAtPickerScrollView:(MLPickerScrollView *)pickerScrollView
@@ -116,7 +162,7 @@
    didSelecteItemAtIndex:(NSInteger)index{
     
     MLDemoModel *model = [self.data objectAtIndex:index];
-    self.selectTextL.text = model.dicountTitle;
+    self.selectTextL.font = [UIFont systemFontOfSize:48];
 }
 
 #pragma mark - delegate
