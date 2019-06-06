@@ -26,7 +26,6 @@
 
 -(void)commonInit{
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.titleLabel.font = [UIFont systemFontOfSize:14];
 }
 

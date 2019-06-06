@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, strong) NSMutableArray *decimalData;
 @property (nonatomic, strong) NSMutableArray *pointsData;
+@property (nonatomic, strong) NSMutableArray *fontArr;
+
 @property (weak, nonatomic) IBOutlet UILabel *selectTextL;
 @property (weak, nonatomic) IBOutlet UIButton *decimalBtn;
 @property (weak, nonatomic) IBOutlet UIButton *pointsBtn;
@@ -24,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *pointsHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *decimalTop;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *decimalHeight;
+@property (weak, nonatomic) IBOutlet UIButton *invisibilityBtn;
 
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @end
@@ -60,35 +63,38 @@
     self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.decimalBtn.layer.borderWidth = 2;
     self.decimalBtn.layer.borderColor = [UIColor whiteColor].CGColor;
-    
+    self.invisibilityBtn.layer.borderWidth = 2;
+    self.invisibilityBtn.layer.borderColor = RGBA(56, 78, 134, 1).CGColor;
     
     NSArray *decimalTitleArray = @[@"4.0",@"4.1",@"4.2",@"4.3",@"4.4",@"4.5",@"4.6",@"4.7",@"4.8",@"4.9",@"5.0",@"5.1",@"5.2",@"5.3"];
-    NSArray *pointsTitleArray1 = @[@"0.1",@"0.12",@"0.15",@"0.2",@"0.25",@"0.3",@"0.4",@"0.5",@"0.6",@"0.8",@"1.0",@"1.2",@"1.5",@"2.0"];
-
+    NSArray *pointsTitleArray = @[@"0.1",@"0.12",@"0.15",@"0.2",@"0.25",@"0.3",@"0.4",@"0.5",@"0.6",@"0.8",@"1.0",@"1.2",@"1.5",@"2.0"];
+    NSArray *fontArr = @[@"0.1",@"0.12",@"0.15",@"0.2",@"0.25",@"0.3",@"0.4",@"0.5",@"0.6",@"0.8",@"1.0",@"1.2",@"1.5",@"2.0"];
+    self.fontArr = [NSMutableArray arrayWithArray:fontArr];
     for (int i = 0; i < decimalTitleArray.count; i++) {
         MLDemoModel *model = [[MLDemoModel alloc] init];
         model.dicountTitle = [decimalTitleArray objectAtIndex:i];
         [self.decimalData addObject:model];
     }
-    for (int i = 0; i < pointsTitleArray1.count; i++) {
+    for (int i = 0; i < pointsTitleArray.count; i++) {
         MLDemoModel *model = [[MLDemoModel alloc] init];
-        model.dicountTitle = [pointsTitleArray1 objectAtIndex:i];
+        model.dicountTitle = [pointsTitleArray objectAtIndex:i];
         [self.pointsData addObject:model];
     }
-    self.data = [NSMutableArray arrayWithArray:self.decimalData];
+    self.data = [NSMutableArray arrayWithArray:self.pointsData];
+    CGFloat withH = (self.view.frame.size.width - 42 - 116) / 5;
     // 2.初始化
     self.pickerScollView = [[MLPickerScrollView alloc] init];
-    _pickerScollView.itemWidth = (self.view.frame.size.width - 42 - 136) / 5; //刚好显示5个的宽度
-    _pickerScollView.itemHeight = (self.view.frame.size.width - 42 - 136) / 5;
-    _pickerScollView.firstItemX = (self.view.frame.size.width - 42 - 136) / 2 - 20;
+    _pickerScollView.itemWidth = withH; //刚好显示5个的宽度
+    _pickerScollView.itemHeight = withH;
+    _pickerScollView.firstItemX = (self.view.frame.size.width - 42 - 116) / 2 - 20;
     _pickerScollView.dataSource = self;
     _pickerScollView.delegate = self;
     [self.view addSubview:_pickerScollView];
     [self.bgView addSubview:_pickerScollView];
     [_pickerScollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.mas_equalTo(self.bgView);
-        make.left.mas_equalTo(68);
-        make.right.mas_equalTo(-68);
+        make.left.mas_equalTo(53);
+        make.right.mas_equalTo(-53);
     }];
     // 3.刷新数据
     [_pickerScollView reloadData];
@@ -112,9 +118,12 @@
     self.pointsBtn.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.decimalBtn setBackgroundImage:[UIImage imageNamed:@"switchover"] forState:(UIControlStateNormal)];
     [self.pointsBtn setBackgroundImage:[UIImage imageNamed:@""] forState:(UIControlStateNormal)];
+    self.data = [NSMutableArray arrayWithArray:self.decimalData];
+    [self.pickerScollView reloadData];
 
 }
 - (IBAction)clickPointsBtn:(UIButton *)sender {
+    self.selectTextL.transform = CGAffineTransformMakeRotation(M_PI/2);
     [sender setTitleEdgeInsets:(UIEdgeInsetsMake(10, 0, 0, 0))];
     [sender setTitleColor:RGBA(15, 40, 120, 1) forState:(UIControlStateNormal)];
     [self.decimalBtn setTitleEdgeInsets:(UIEdgeInsetsMake(0, 0, 0, 0))];
@@ -131,6 +140,18 @@
     self.decimalBtn.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.pointsBtn setBackgroundImage:[UIImage imageNamed:@"switchover"] forState:(UIControlStateNormal)];
     [self.decimalBtn setBackgroundImage:[UIImage imageNamed:@""] forState:(UIControlStateNormal)];
+    self.data = [NSMutableArray arrayWithArray:self.pointsData];
+    [self.pickerScollView reloadData];
+}
+- (IBAction)clickInvisibilityBtn:(UIButton *)sender {
+}
+- (IBAction)clickTopBtn:(UIButton *)sender {
+}
+- (IBAction)clickRightBtn:(UIButton *)sender {
+}
+- (IBAction)clickLeftBtn:(id)sender {
+}
+- (IBAction)clickBottomBtn:(id)sender {
 }
 
 #pragma mark - dataSource
@@ -162,7 +183,7 @@
    didSelecteItemAtIndex:(NSInteger)index{
     
     MLDemoModel *model = [self.data objectAtIndex:index];
-    self.selectTextL.font = [UIFont systemFontOfSize:48];
+    self.selectTextL.font = [UIFont systemFontOfSize:9];
 }
 
 #pragma mark - delegate
