@@ -7,8 +7,10 @@
 //
 
 #import "EyePreparationTestViewController.h"
-
+#import "CountLabel.h"
+#import "EyeStartTestViewController.h"
 @interface EyePreparationTestViewController ()
+@property (weak, nonatomic) IBOutlet CountLabel *countdown;
 
 @end
 
@@ -16,7 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_countdown startCount];
+    _countdown.ablock = ^{
+        EyeStartTestViewController *vc = [[EyeStartTestViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+     };
     // Do any additional setup after loading the view.
+    
 }
 
 /*

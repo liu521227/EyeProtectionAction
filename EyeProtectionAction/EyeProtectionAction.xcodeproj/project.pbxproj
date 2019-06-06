@@ -26,6 +26,7 @@
 		448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */; };
 		44FFEB0A22A11B4300A0C07D /* EyeInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FFEB0922A11B4300A0C07D /* EyeInstructionsViewController.m */; };
 		44FFEB0D22A11B9200A0C07D /* EyePreparationTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FFEB0C22A11B9200A0C07D /* EyePreparationTestViewController.m */; };
+		77B6740422A94DE30086CF0F /* CountLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B6740322A94DE30086CF0F /* CountLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		44FFEB0B22A11B9200A0C07D /* EyePreparationTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyePreparationTestViewController.h; sourceTree = "<group>"; };
 		44FFEB0C22A11B9200A0C07D /* EyePreparationTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyePreparationTestViewController.m; sourceTree = "<group>"; };
 		7027C103036258A8241AF197 /* libPods-EyeProtectionAction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EyeProtectionAction.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77B6740222A94DE30086CF0F /* CountLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountLabel.h; sourceTree = "<group>"; };
+		77B6740322A94DE30086CF0F /* CountLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountLabel.m; sourceTree = "<group>"; };
 		7C1655ED00EBA7D2915AD4AA /* Pods-EyeProtectionAction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeProtectionAction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction.debug.xcconfig"; sourceTree = "<group>"; };
 		7D151DD5C0AC372934661AB1 /* Pods-EyeProtectionAction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeProtectionAction.release.xcconfig"; path = "Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +161,8 @@
 				44477237229828280062AEDC /* LaunchScreen.storyboard */,
 				4447723A229828280062AEDC /* Info.plist */,
 				4447723B229828280062AEDC /* main.m */,
+				77B6740222A94DE30086CF0F /* CountLabel.h */,
+				77B6740322A94DE30086CF0F /* CountLabel.m */,
 			);
 			path = EyeProtectionAction;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				44884E4122A61EF00033FBB9 /* MLDemoItem.m in Sources */,
 				4447722E229828260062AEDC /* AppDelegate.m in Sources */,
 				44884E3522A53FB00033FBB9 /* EyeStartTestViewController.m in Sources */,
+				77B6740422A94DE30086CF0F /* CountLabel.m in Sources */,
 				44884E4522A61EF00033FBB9 /* MLPickerItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
