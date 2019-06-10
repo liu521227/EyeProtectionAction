@@ -20,8 +20,9 @@
     [super viewDidLoad];
     [_countdown startCount];
     _countdown.ablock = ^{
-        EyeStartTestViewController *vc = [[EyeStartTestViewController alloc]init];
-        [self.navigationController pushViewController:vc animated:YES];
+//        EyeStartTestViewController *vc = [[EyeStartTestViewController alloc]init];
+//        [self.navigationController pushViewController:vc animated:YES];
+        [self performSegueWithIdentifier:@"StartTest"sender:self];
      };
     // Do any additional setup after loading the view.
     

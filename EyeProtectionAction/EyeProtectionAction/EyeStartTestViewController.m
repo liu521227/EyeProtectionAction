@@ -59,8 +59,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.bgView.layer.borderWidth = 2;
-    self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
+    
     self.decimalBtn.layer.borderWidth = 2;
     self.decimalBtn.layer.borderColor = [UIColor whiteColor].CGColor;
     self.invisibilityBtn.layer.borderWidth = 2;
@@ -96,6 +95,9 @@
         make.left.mas_equalTo(53);
         make.right.mas_equalTo(-53);
     }];
+    
+    self.bgView.layer.borderWidth = 2;
+    self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
     // 3.刷新数据
     [_pickerScollView reloadData];
     _pickerScollView.seletedIndex = 3;
