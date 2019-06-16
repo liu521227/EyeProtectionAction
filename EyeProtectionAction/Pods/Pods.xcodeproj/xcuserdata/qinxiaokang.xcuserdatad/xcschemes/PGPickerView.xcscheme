@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "02796261E21A41456635563990671948"
+               BlueprintIdentifier = "EE9326EF1CDC9B38D69A92B2D6169E8C"
                BuildableName = "libPGPickerView.a"
                BlueprintName = "PGPickerView"
                ReferencedContainer = "container:Pods.xcodeproj">

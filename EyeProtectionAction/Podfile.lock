@@ -18,11 +18,15 @@ PODS:
   - PGDatePicker (2.6.9):
     - PGPickerView
   - PGPickerView (1.3.8)
+  - RTRootNavigationController (0.7.1):
+    - RTRootNavigationController/Core (= 0.7.1)
+  - RTRootNavigationController/Core (0.7.1)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
   - PGDatePicker
+  - RTRootNavigationController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -30,13 +34,15 @@ SPEC REPOS:
     - Masonry
     - PGDatePicker
     - PGPickerView
+    - RTRootNavigationController
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PGDatePicker: 88960f3760edac96219c10320f25536ad31d0f44
   PGPickerView: 037acfb132a4c8054fb43aaa59a5ff50c7f747f5
+  RTRootNavigationController: afa6913402be26f8326f7f37fc1550aa67baddcc
 
-PODFILE CHECKSUM: e75fe9f1665e4ad902c64b1023d2e3f21b7e40d4
+PODFILE CHECKSUM: af38f7bb6d6fc48edbfffb3fbb2d0997b9d0c36b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.2

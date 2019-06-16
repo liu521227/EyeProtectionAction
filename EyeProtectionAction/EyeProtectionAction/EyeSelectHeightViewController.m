@@ -62,6 +62,10 @@
 
 }
 
+- (void)back
+{
+    [self.rt_navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (NSInteger)numberOfComponentsInPickerView:(nonnull PGPickerView *)pickerView {
     return 1;
@@ -81,9 +85,6 @@
 - (void)pickerView:(PGPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     self.titleL.text = self.dataArr[row];
 }
-
-
-
 
 
 @end

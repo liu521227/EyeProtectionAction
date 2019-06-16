@@ -11,7 +11,7 @@
 #import "EyeStartTestViewController.h"
 @interface EyePreparationTestViewController ()
 @property (weak, nonatomic) IBOutlet CountLabel *countdown;
-
+@property (nonatomic, assign) BOOL isClickBack;
 @end
 
 @implementation EyePreparationTestViewController
@@ -22,10 +22,18 @@
     _countdown.ablock = ^{
 //        EyeStartTestViewController *vc = [[EyeStartTestViewController alloc]init];
 //        [self.navigationController pushViewController:vc animated:YES];
-        [self performSegueWithIdentifier:@"StartTest"sender:self];
+        if (self && self.isClickBack == NO) {
+            [self performSegueWithIdentifier:@"StartTest"sender:self];
+        }
      };
     // Do any additional setup after loading the view.
     
+}
+
+- (void)back
+{
+    self.isClickBack = YES;
+    [self.rt_navigationController popToRootViewControllerAnimated:YES];
 }
 
 /*

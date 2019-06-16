@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
+#import "EyeTool.h"
+#import <RTRootNavigationController/RTRootNavigationController.h>
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
@@ -16,7 +18,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseViewController : UIViewController
-
+- (void)back;
 @end
 
 NS_ASSUME_NONNULL_END

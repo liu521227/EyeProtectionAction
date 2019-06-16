@@ -11,6 +11,13 @@
 #import "MLDemoItem.h"
 #import "MLDemoModel.h"
 
+typedef enum : NSUInteger {
+    EyeImageOrientationTypeTop,
+    EyeImageOrientationTypeLeft,
+    EyeImageOrientationTypeBottom,
+    EyeImageOrientationTypeRight
+} EyeImageOrientationType;
+
 @interface EyeStartTestViewController ()<MLPickerScrollViewDataSource,MLPickerScrollViewDelegate>
 
 @property (nonatomic, strong) MLPickerScrollView *pickerScollView;
@@ -18,8 +25,7 @@
 @property (nonatomic, strong) NSMutableArray *decimalData;
 @property (nonatomic, strong) NSMutableArray *pointsData;
 @property (nonatomic, strong) NSMutableArray *fontArr;
-
-@property (weak, nonatomic) IBOutlet UILabel *selectTextL;
+@property(nonatomic, strong) NSMutableDictionary *imageData;
 @property (weak, nonatomic) IBOutlet UIButton *decimalBtn;
 @property (weak, nonatomic) IBOutlet UIButton *pointsBtn;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *pointsTop;
@@ -27,8 +33,22 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *decimalTop;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *decimalHeight;
 @property (weak, nonatomic) IBOutlet UIButton *invisibilityBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *selectImage;
 
 @property (weak, nonatomic) IBOutlet UIView *bgView;
+
+@property (nonatomic, strong) NSMutableDictionary *resultDic;
+
+/**
+ 当前数据
+ */
+@property (nonatomic, strong) NSDictionary *selectDataDic;
+
+/**
+ 当前位置
+ */
+@property (nonatomic, assign) NSInteger selectIndex;
+
 @end
 
 @implementation EyeStartTestViewController
@@ -57,9 +77,24 @@
     return _data;
 }
 
+- (NSDictionary *)selectDataDic
+{
+    if (!_selectDataDic) {
+        _selectDataDic = [NSDictionary new];
+    }
+    return _selectDataDic;
+}
+
+- (NSMutableDictionary *)resultDic
+{
+    if (!_resultDic) {
+        _resultDic = [NSMutableDictionary new];
+    }
+    return _resultDic;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.decimalBtn.layer.borderWidth = 2;
     self.decimalBtn.layer.borderColor = [UIColor whiteColor].CGColor;
     self.invisibilityBtn.layer.borderWidth = 2;
@@ -80,6 +115,13 @@
         [self.pointsData addObject:model];
     }
     self.data = [NSMutableArray arrayWithArray:self.pointsData];
+    NSMutableDictionary *imageData = [NSMutableDictionary new];
+    for (NSInteger i = 0; i < self.data.count; i++) {
+        NSArray *dataArr = @[@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld上",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeTop)},@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld左",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeLeft)},@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld下",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeBottom)},@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld右",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeRight)}];
+        imageData[[NSString stringWithFormat:@"%ld",i]] = dataArr;
+    }
+    self.imageData = imageData;
+    
     CGFloat withH = (self.view.frame.size.width - 42 - 116) / 5;
     // 2.初始化
     self.pickerScollView = [[MLPickerScrollView alloc] init];
@@ -100,9 +142,15 @@
     self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
     // 3.刷新数据
     [_pickerScollView reloadData];
-    _pickerScollView.seletedIndex = 3;
-    [_pickerScollView scollToSelectdIndex:3];
+    _pickerScollView.seletedIndex = 0;
+    [_pickerScollView scollToSelectdIndex:0];
 }
+
+- (void)back
+{
+    [self.rt_navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (IBAction)clickDecimalBtn:(UIButton *)sender {
     [sender setTitleEdgeInsets:(UIEdgeInsetsMake(10, 0, 0, 0))];
     [self.pointsBtn setTitleEdgeInsets:(UIEdgeInsetsMake(0, 0, 0, 0))];
@@ -125,7 +173,6 @@
 
 }
 - (IBAction)clickPointsBtn:(UIButton *)sender {
-    self.selectTextL.transform = CGAffineTransformMakeRotation(M_PI/2);
     [sender setTitleEdgeInsets:(UIEdgeInsetsMake(10, 0, 0, 0))];
     [sender setTitleColor:RGBA(15, 40, 120, 1) forState:(UIControlStateNormal)];
     [self.decimalBtn setTitleEdgeInsets:(UIEdgeInsetsMake(0, 0, 0, 0))];
@@ -146,14 +193,55 @@
     [self.pickerScollView reloadData];
 }
 - (IBAction)clickInvisibilityBtn:(UIButton *)sender {
+    if ([EyeTool sharedSingleton].isLeftEye == NO) {
+        [EyeTool sharedSingleton].isLeftEye = YES;
+        NSLog(@"开始左眼测试");
+        [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
+        [self performSegueWithIdentifier:@"seleteEye"sender:self];
+    } else {
+        [EyeTool sharedSingleton].testResultDic[@"leftTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
+        NSLog(@"结束");
+        [self performSegueWithIdentifier:@"EyeTestResult"sender:self];
+    }
 }
 - (IBAction)clickTopBtn:(UIButton *)sender {
+    [self chooseCheck:(EyeImageOrientationTypeTop)];
 }
 - (IBAction)clickRightBtn:(UIButton *)sender {
+    [self chooseCheck:(EyeImageOrientationTypeRight)];
 }
 - (IBAction)clickLeftBtn:(id)sender {
+    [self chooseCheck:(EyeImageOrientationTypeLeft)];
 }
 - (IBAction)clickBottomBtn:(id)sender {
+    [self chooseCheck:(EyeImageOrientationTypeBottom)];
+}
+
+/**
+选择校验
+ @param imageOrientationType 选择方向
+ */
+- (void)chooseCheck:(EyeImageOrientationType)imageOrientationType{
+    NSInteger nextIndex;
+    if ([self.selectDataDic[@"orientation"] integerValue] == imageOrientationType) {
+        //选择正确
+        nextIndex = self.selectIndex + 1;
+        if (nextIndex < self.data.count) {
+            _pickerScollView.seletedIndex = nextIndex;
+            [_pickerScollView scollToSelectdIndex:nextIndex];
+            return;
+        }
+    }
+    if ([EyeTool sharedSingleton].isLeftEye == NO) {
+        [EyeTool sharedSingleton].isLeftEye = YES;
+        NSLog(@"开始左眼测试");
+        [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
+        [self performSegueWithIdentifier:@"seleteEye"sender:self];
+    } else {
+        [EyeTool sharedSingleton].testResultDic[@"leftTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
+        NSLog(@"结束");
+        [self performSegueWithIdentifier:@"EyeTestResult"sender:self];
+    }
 }
 
 #pragma mark - dataSource
@@ -183,9 +271,12 @@
 
 - (void)pickerScrollView:(MLPickerScrollView *)menuScrollView
    didSelecteItemAtIndex:(NSInteger)index{
-    
-    MLDemoModel *model = [self.data objectAtIndex:index];
-    self.selectTextL.font = [UIFont systemFontOfSize:9];
+    NSArray *data = self.imageData[[NSString stringWithFormat:@"%ld",index]];
+    NSInteger i = arc4random() % 4;
+    NSDictionary *imageDic = data[i];
+    self.selectDataDic = imageDic;
+    self.selectIndex = index;
+    self.selectImage.image = imageDic[@"image"];
 }
 
 #pragma mark - delegate
@@ -198,5 +289,48 @@
 {
     [item backSizeOfItem];
 }
+
+/**
+ 绘制图片
+ 
+ @param color 背景色
+ @param size 大小
+ @param text 文字
+ @param textAttributes 字体设置
+ @param isCircular 是否圆形
+ @return 图片
+ */
+- (UIImage *)zd_imageWithColor:(UIColor *)color
+                          size:(CGSize)size
+                          text:(NSString *)text
+                textAttributes:(NSDictionary *)textAttributes
+                      circular:(BOOL)isCircular
+{
+    if (!color || size.width <= 0 || size.height <= 0) return nil;
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // circular
+    if (isCircular) {
+        CGPathRef path = CGPathCreateWithEllipseInRect(rect, NULL);
+        CGContextAddPath(context, path);
+        CGContextClip(context);
+        CGPathRelease(path);
+    }
+    
+    // color
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    
+    // text
+    CGSize textSize = [text sizeWithAttributes:textAttributes];
+    [text drawInRect:CGRectMake((size.width - textSize.width) / 2, (size.height - textSize.height) / 2, textSize.width, textSize.height) withAttributes:textAttributes];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 
 @end

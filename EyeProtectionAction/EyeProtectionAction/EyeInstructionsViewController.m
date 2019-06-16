@@ -19,6 +19,11 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)back
+{
+    [self.rt_navigationController popToRootViewControllerAnimated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
