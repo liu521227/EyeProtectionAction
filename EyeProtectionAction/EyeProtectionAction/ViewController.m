@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "EyeTool.h"
+
 @interface ViewController ()
 
 @end
@@ -17,7 +19,9 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
-
+    [[EyeTool sharedSingleton].testResultDic removeAllObjects];
+    [EyeTool sharedSingleton].isLeftEye = NO;
+    [EyeTool sharedSingleton].isDecimal = NO;
 }
 
 - (void)viewDidLoad {

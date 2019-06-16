@@ -24,7 +24,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, strong) NSMutableArray *decimalData;
 @property (nonatomic, strong) NSMutableArray *pointsData;
-@property (nonatomic, strong) NSMutableArray *fontArr;
+@property (nonatomic, strong) NSMutableArray *pointsTitleArray;
+@property (nonatomic, strong) NSMutableArray *decimalTitleArray;
 @property(nonatomic, strong) NSMutableDictionary *imageData;
 @property (weak, nonatomic) IBOutlet UIButton *decimalBtn;
 @property (weak, nonatomic) IBOutlet UIButton *pointsBtn;
@@ -101,9 +102,9 @@ typedef enum : NSUInteger {
     self.invisibilityBtn.layer.borderColor = RGBA(56, 78, 134, 1).CGColor;
     
     NSArray *decimalTitleArray = @[@"4.0",@"4.1",@"4.2",@"4.3",@"4.4",@"4.5",@"4.6",@"4.7",@"4.8",@"4.9",@"5.0",@"5.1",@"5.2",@"5.3"];
+    self.decimalTitleArray = [NSMutableArray arrayWithArray:decimalTitleArray];
     NSArray *pointsTitleArray = @[@"0.1",@"0.12",@"0.15",@"0.2",@"0.25",@"0.3",@"0.4",@"0.5",@"0.6",@"0.8",@"1.0",@"1.2",@"1.5",@"2.0"];
-    NSArray *fontArr = @[@"0.1",@"0.12",@"0.15",@"0.2",@"0.25",@"0.3",@"0.4",@"0.5",@"0.6",@"0.8",@"1.0",@"1.2",@"1.5",@"2.0"];
-    self.fontArr = [NSMutableArray arrayWithArray:fontArr];
+    self.pointsTitleArray = [NSMutableArray arrayWithArray:pointsTitleArray];
     for (int i = 0; i < decimalTitleArray.count; i++) {
         MLDemoModel *model = [[MLDemoModel alloc] init];
         model.dicountTitle = [decimalTitleArray objectAtIndex:i];
@@ -114,7 +115,11 @@ typedef enum : NSUInteger {
         model.dicountTitle = [pointsTitleArray objectAtIndex:i];
         [self.pointsData addObject:model];
     }
-    self.data = [NSMutableArray arrayWithArray:self.pointsData];
+    if ([EyeTool sharedSingleton].isDecimal == YES) {
+        self.data = [NSMutableArray arrayWithArray:self.decimalData];
+    } else {
+        self.data = [NSMutableArray arrayWithArray:self.pointsData];
+    }
     NSMutableDictionary *imageData = [NSMutableDictionary new];
     for (NSInteger i = 0; i < self.data.count; i++) {
         NSArray *dataArr = @[@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld上",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeTop)},@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld左",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeLeft)},@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld下",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeBottom)},@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld右",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeRight)}];
@@ -152,6 +157,7 @@ typedef enum : NSUInteger {
 }
 
 - (IBAction)clickDecimalBtn:(UIButton *)sender {
+    [EyeTool sharedSingleton].isDecimal = YES;
     [sender setTitleEdgeInsets:(UIEdgeInsetsMake(10, 0, 0, 0))];
     [self.pointsBtn setTitleEdgeInsets:(UIEdgeInsetsMake(0, 0, 0, 0))];
     [sender setTitleColor:RGBA(15, 40, 120, 1) forState:(UIControlStateNormal)];
@@ -173,6 +179,7 @@ typedef enum : NSUInteger {
 
 }
 - (IBAction)clickPointsBtn:(UIButton *)sender {
+    [EyeTool sharedSingleton].isDecimal = NO;
     [sender setTitleEdgeInsets:(UIEdgeInsetsMake(10, 0, 0, 0))];
     [sender setTitleColor:RGBA(15, 40, 120, 1) forState:(UIControlStateNormal)];
     [self.decimalBtn setTitleEdgeInsets:(UIEdgeInsetsMake(0, 0, 0, 0))];
@@ -199,6 +206,17 @@ typedef enum : NSUInteger {
         [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
         [self performSegueWithIdentifier:@"seleteEye"sender:self];
     } else {
+        if ([EyeTool sharedSingleton].isDecimal == YES) {
+            if ([self.pointsTitleArray containsObject:[EyeTool sharedSingleton].testResultDic[@"rightTestResul"]]) {
+                NSInteger index = [self.pointsTitleArray indexOfObject:[EyeTool sharedSingleton].testResultDic[@"rightTestResul"]];
+                [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[index]).dicountTitle];
+            }
+        } else {
+            if ([self.decimalTitleArray containsObject:[EyeTool sharedSingleton].testResultDic[@"rightTestResul"]]) {
+                NSInteger index = [self.decimalTitleArray indexOfObject:[EyeTool sharedSingleton].testResultDic[@"rightTestResul"]];
+                [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[index]).dicountTitle];
+            }
+        }
         [EyeTool sharedSingleton].testResultDic[@"leftTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
         NSLog(@"结束");
         [self performSegueWithIdentifier:@"EyeTestResult"sender:self];
@@ -238,6 +256,17 @@ typedef enum : NSUInteger {
         [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
         [self performSegueWithIdentifier:@"seleteEye"sender:self];
     } else {
+        if ([EyeTool sharedSingleton].isDecimal == YES) {
+            if ([self.pointsTitleArray containsObject:[EyeTool sharedSingleton].testResultDic[@"rightTestResul"]]) {
+                NSInteger index = [self.pointsTitleArray indexOfObject:[EyeTool sharedSingleton].testResultDic[@"rightTestResul"]];
+                [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[index]).dicountTitle];
+            }
+        }else {
+            if ([self.decimalTitleArray containsObject:[EyeTool sharedSingleton].testResultDic[@"rightTestResul"]]) {
+                NSInteger index = [self.decimalTitleArray indexOfObject:[EyeTool sharedSingleton].testResultDic[@"rightTestResul"]];
+                [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[index]).dicountTitle];
+            }
+        }
         [EyeTool sharedSingleton].testResultDic[@"leftTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
         NSLog(@"结束");
         [self performSegueWithIdentifier:@"EyeTestResult"sender:self];

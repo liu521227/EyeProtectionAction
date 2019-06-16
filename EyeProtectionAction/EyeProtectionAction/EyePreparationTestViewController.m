@@ -11,6 +11,7 @@
 #import "EyeStartTestViewController.h"
 @interface EyePreparationTestViewController ()
 @property (weak, nonatomic) IBOutlet CountLabel *countdown;
+@property (weak, nonatomic) IBOutlet UILabel *titleL;
 @property (nonatomic, assign) BOOL isClickBack;
 @end
 
@@ -18,6 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if ([EyeTool sharedSingleton].isLeftEye == YES) {
+        self.titleL.text = @"Cover your left eye, please.\nSelecting the Orientation of E Mark\nOpening by Sliding Screen";
+    } else {
+        self.titleL.text = @"Cover your right eye, please.\nSelecting the Orientation of E Mark\nOpening by Sliding Screen";
+    }
     [_countdown startCount];
     _countdown.ablock = ^{
 //        EyeStartTestViewController *vc = [[EyeStartTestViewController alloc]init];

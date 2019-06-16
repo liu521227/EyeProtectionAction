@@ -178,7 +178,7 @@
         <!--Instructions-->
         <scene sceneID="hEb-Tq-tUx">
             <objects>
-                <viewController id="uxE-5f-XQa" sceneMemberID="viewController">
+                <viewController id="uxE-5f-XQa" customClass="EyeInstructionsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nzd-l5-FML">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,6 +246,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="23"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="MqB-ev-7ND" kind="push" id="KNx-yi-56P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -329,6 +332,7 @@ Selecting the Orientation of E Mark
                     <navigationItem key="navigationItem" title="PreparationTest" id="SRI-Om-ZAh"/>
                     <connections>
                         <outlet property="countdown" destination="Be5-PK-KRh" id="e1W-9s-Gas"/>
+                        <outlet property="titleL" destination="JgY-Yh-LcU" id="zj8-By-CqR"/>
                         <segue destination="Wi6-vQ-aUg" kind="push" identifier="StartTest" id="aTO-ZX-NJY"/>
                     </connections>
                 </viewController>
@@ -657,6 +661,8 @@ Selecting the Orientation of E Mark
         <image name="top" width="37" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="aTO-ZX-NJY"/>
         <segue reference="7e7-Ge-0tD"/>
+        <segue reference="KNx-yi-56P"/>
     </inferredMetricsTieBreakers>
 </document>

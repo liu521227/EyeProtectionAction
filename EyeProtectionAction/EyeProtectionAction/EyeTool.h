@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableDictionary *testResultDic;
 @property (nonatomic, assign) BOOL isLeftEye;
+@property (nonatomic, assign) BOOL isDecimal;
+
 @end
 
 NS_ASSUME_NONNULL_END
