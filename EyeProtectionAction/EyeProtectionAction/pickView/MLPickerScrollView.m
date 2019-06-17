@@ -10,6 +10,7 @@
 
 #import "MLPickerScrollView.h"
 #import "MLPickerItem.h"
+#import "MLDemoItem.h"
 
 @interface MLPickerScrollView ()<UIScrollViewDelegate>
 
@@ -82,7 +83,7 @@
     NSLog(@"  CGRectGetHeight(self.bounds) : %f   self.itemHeight : %f",CGRectGetHeight(self.bounds),self.itemHeight);
     
     for (int i = 0; i < self.items.count; i++) {
-        MLPickerItem *item = [self.items objectAtIndex:i];
+        MLDemoItem *item = [self.items objectAtIndex:i];
         item.frame = CGRectMake(startX, 0, self.itemWidth, self.itemHeight);
         startX += self.itemWidth;//记录x的坐标
     }
