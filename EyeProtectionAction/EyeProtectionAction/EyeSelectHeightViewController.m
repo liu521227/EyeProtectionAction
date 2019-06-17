@@ -8,6 +8,7 @@
 
 #import "EyeSelectHeightViewController.h"
 #import <PGPickerView/PGPickerView.h>
+#import "SystemMacro.h"
 
 @interface EyeSelectHeightViewController ()<PGPickerViewDataSource,PGPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleL;
@@ -51,12 +52,22 @@
     for (NSInteger i = 80; i<= 220; i++) {
         [self.dataArr addObject:[NSString stringWithFormat:@"%ldcm",i]];
     }
-    [self.pgPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(40);
-        make.right.mas_equalTo(0);
-        make.height.mas_equalTo(342);
-        make.width.mas_equalTo(150);
-    }];
+    if (kScreenBoundWidth < 321) {
+        [self.pgPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(20);
+            make.right.mas_equalTo(25);
+            make.height.mas_equalTo(322);
+            make.width.mas_equalTo(130);
+        }];
+    }else {
+        
+        [self.pgPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(40);
+            make.right.mas_equalTo(0);
+            make.height.mas_equalTo(342);
+            make.width.mas_equalTo(150);
+        }];
+    }
 //    [self.pgPickerView selectRow:98 inComponent:0 animated:YES];
 //    [self pickerView:self.pgPickerView didSelectRow:98 inComponent:0];
 

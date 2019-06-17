@@ -94,6 +94,7 @@
 		77B6740322A94DE30086CF0F /* CountLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountLabel.m; sourceTree = "<group>"; };
 		7C1655ED00EBA7D2915AD4AA /* Pods-EyeProtectionAction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeProtectionAction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction.debug.xcconfig"; sourceTree = "<group>"; };
 		7D151DD5C0AC372934661AB1 /* Pods-EyeProtectionAction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeProtectionAction.release.xcconfig"; path = "Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction.release.xcconfig"; sourceTree = "<group>"; };
+		A34FC95322B757E600F63D5F /* SystemMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +148,7 @@
 		4447722B229828260062AEDC /* EyeProtectionAction */ = {
 			isa = PBXGroup;
 			children = (
+				A34FC95322B757E600F63D5F /* SystemMacro.h */,
 				44884E3622A61EF00033FBB9 /* pickView */,
 				4447722C229828260062AEDC /* AppDelegate.h */,
 				4447722D229828260062AEDC /* AppDelegate.m */,
