@@ -65,6 +65,7 @@
 		4447724C229828280062AEDC /* EyeProtectionActionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeProtectionActionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44477250229828280062AEDC /* EyeProtectionActionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeProtectionActionUITests.m; sourceTree = "<group>"; };
 		44477252229828280062AEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		447C23A222B789FA00B3F309 /* EyeProtectionAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EyeProtectionAction.entitlements; sourceTree = "<group>"; };
 		44884E3322A53FB00033FBB9 /* EyeStartTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeStartTestViewController.h; sourceTree = "<group>"; };
 		44884E3422A53FB00033FBB9 /* EyeStartTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeStartTestViewController.m; sourceTree = "<group>"; };
 		44884E3722A61EF00033FBB9 /* MLDemoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLDemoItem.m; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		4447722B229828260062AEDC /* EyeProtectionAction */ = {
 			isa = PBXGroup;
 			children = (
+				447C23A222B789FA00B3F309 /* EyeProtectionAction.entitlements */,
 				A34FC95322B757E600F63D5F /* SystemMacro.h */,
 				44884E3622A61EF00033FBB9 /* pickView */,
 				4447722C229828260062AEDC /* AppDelegate.h */,
@@ -300,6 +302,11 @@
 				TargetAttributes = {
 					44477228229828260062AEDC = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					44477240229828280062AEDC = {
 						CreatedOnToolsVersion = 10.1;
@@ -389,13 +396,19 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources.sh",
+				"${PODS_ROOT}/PGDatePicker/PGDatePicker/PGDatePicker.bundle",
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -592,15 +605,20 @@
 			baseConfigurationReference = 7C1655ED00EBA7D2915AD4AA /* Pods-EyeProtectionAction.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EyeProtectionAction/EyeProtectionAction.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJYYAJ3973;
 				INFOPLIST_FILE = EyeProtectionAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -609,15 +627,20 @@
 			baseConfigurationReference = 7D151DD5C0AC372934661AB1 /* Pods-EyeProtectionAction.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EyeProtectionAction/EyeProtectionAction.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJYYAJ3973;
 				INFOPLIST_FILE = EyeProtectionAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -626,6 +649,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJYYAJ3973;
 				INFOPLIST_FILE = EyeProtectionActionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -644,6 +668,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJYYAJ3973;
 				INFOPLIST_FILE = EyeProtectionActionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -661,6 +686,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJYYAJ3973;
 				INFOPLIST_FILE = EyeProtectionActionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -678,6 +704,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJYYAJ3973;
 				INFOPLIST_FILE = EyeProtectionActionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

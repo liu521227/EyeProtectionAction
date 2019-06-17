@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - JCore (2.0.2)
+  - JPush (3.2.1):
+    - JCore (< 3.0.0, >= 2.0.0)
   - Masonry (1.1.0)
   - PGDatePicker (2.6.9):
     - PGPickerView
@@ -24,6 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - JPush
   - Masonry
   - PGDatePicker
   - RTRootNavigationController
@@ -31,6 +35,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - JCore
+    - JPush
     - Masonry
     - PGDatePicker
     - PGPickerView
@@ -38,11 +44,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  JCore: d4cbe6d178eaeb0ed263e42a6ebcb617855ef7cb
+  JPush: a1ff8b8ec53fa3419b414946e4db4efa313baeae
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PGDatePicker: 88960f3760edac96219c10320f25536ad31d0f44
   PGPickerView: 037acfb132a4c8054fb43aaa59a5ff50c7f747f5
   RTRootNavigationController: afa6913402be26f8326f7f37fc1550aa67baddcc
 
-PODFILE CHECKSUM: af38f7bb6d6fc48edbfffb3fbb2d0997b9d0c36b
+PODFILE CHECKSUM: 4fc0bc3e0641adec14ab4721c89d9e0c0e88882b
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.5.3
