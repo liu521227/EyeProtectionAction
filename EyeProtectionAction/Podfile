@@ -9,6 +9,8 @@ def shared_pods
   pod 'PGDatePicker'
   pod 'RTRootNavigationController'
   pod 'JPush'
+  pod 'YYModel'
+  
 end
 
 target 'EyeProtectionAction' do

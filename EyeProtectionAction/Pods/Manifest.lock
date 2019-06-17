@@ -24,6 +24,7 @@ PODS:
   - RTRootNavigationController (0.7.1):
     - RTRootNavigationController/Core (= 0.7.1)
   - RTRootNavigationController/Core (0.7.1)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - Masonry
   - PGDatePicker
   - RTRootNavigationController
+  - YYModel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -41,6 +43,7 @@ SPEC REPOS:
     - PGDatePicker
     - PGPickerView
     - RTRootNavigationController
+    - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -50,7 +53,8 @@ SPEC CHECKSUMS:
   PGDatePicker: 88960f3760edac96219c10320f25536ad31d0f44
   PGPickerView: 037acfb132a4c8054fb43aaa59a5ff50c7f747f5
   RTRootNavigationController: afa6913402be26f8326f7f37fc1550aa67baddcc
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 4fc0bc3e0641adec14ab4721c89d9e0c0e88882b
+PODFILE CHECKSUM: 2c3a38b37679e81fa9c5a3bb6a759fd14fd641a0
 
 COCOAPODS: 1.5.3
