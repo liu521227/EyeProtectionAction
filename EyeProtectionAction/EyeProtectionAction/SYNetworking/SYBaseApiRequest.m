@@ -2,7 +2,7 @@
 //  SYBaseApiRequest.m
 //  Pods-SYNetworking_Example
 //
-//  Created by 陈腾飞 on 2019/1/4.
+//  Created by shirly on 2019/1/4.
 //
 
 #import "SYBaseApiRequest.h"

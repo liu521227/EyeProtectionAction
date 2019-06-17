@@ -1,15 +1,15 @@
 //
-//  MJBWebViewController.h
-//  MJBWeightTool
+//  XKXWebViewController.h
+//  XKXWeightTool
 //
-//  Created by 陈腾飞 on 2019/6/9.
+//  Created by shirly on 2019/6/9.
 //
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MJBWebViewController : UIViewController
+@interface XKXWebViewController : UIViewController
 
 @property (nonatomic, strong) UIWebView *webVC;
 

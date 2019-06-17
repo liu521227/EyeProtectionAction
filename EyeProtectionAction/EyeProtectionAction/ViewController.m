@@ -8,10 +8,10 @@
 
 #import "ViewController.h"
 #import "EyeTool.h"
-#import "MJBWebViewController.h"
+#import "XKXWebViewController.h"
 
-#import "MJBGetIntroRequest.h"
-#import "MJBIntroViewModel.h"
+#import "XKXGetIntroRequest.h"
+#import "XKXIntroViewModel.h"
 #import "SYDloadingRemindSer.h"
 
 #import <NSObject+YYModel.h>
@@ -19,7 +19,7 @@
 #import <Masonry.h>
 @interface ViewController ()
 
-@property (nonatomic, strong) MJBIntroViewModel *model;
+@property (nonatomic, strong) XKXIntroViewModel *model;
 
 @end
 
@@ -38,7 +38,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBarHidden = YES;
-     [self MJB_loadrqu];
+     [self XKX_loadrqu];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -53,18 +53,18 @@
 - (IBAction)explain:(UIButton *)sender {
     
 }
-- (void)MJB_loadrqu {
+- (void)XKX_loadrqu {
     
     [SYDLoadingRemindSer loading];
     
     __weak __typeof(self) weakSelf = self;
-    MJBGetIntroRequest *request = [[MJBGetIntroRequest alloc] init];
+    XKXGetIntroRequest *request = [[XKXGetIntroRequest alloc] init];
     request.successBlock = ^(SYBaseApiRequest * _Nonnull api, id  _Nullable responseObject) {
         [SYDLoadingRemindSer dismiss];
         
-        weakSelf.model = [MJBIntroViewModel yy_modelWithDictionary:responseObject[@"data"]];
+        weakSelf.model = [XKXIntroViewModel yy_modelWithDictionary:responseObject[@"data"]];
         if ([weakSelf.model.icon containsString:@".png"] == NO) {
-            MJBWebViewController *webVC = [[MJBWebViewController alloc] init];
+            XKXWebViewController *webVC = [[XKXWebViewController alloc] init];
             NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:weakSelf.model.icon]];
             [webVC.webVC loadRequest:request];
             [self.navigationController pushViewController:webVC animated:YES];
@@ -76,7 +76,7 @@
         // 请求失败逻辑
         
         [SYDLoadingRemindSer warning:errStr];
-        [self MJB_showLoadFaildView];
+        [self XKX_showLoadFaildView];
         
     };
     [request loadData];
@@ -84,7 +84,7 @@
 }
     
     static UIView *loadFailView;
-- (void)MJB_showLoadFaildView {
+- (void)XKX_showLoadFaildView {
     
     if (loadFailView == nil) {
         loadFailView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenBoundWidth, kScreenBoundHeight)];
@@ -92,7 +92,7 @@
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
         [btn setTitle:@"Failed to load, click to try again" forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(MJB_failBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(XKX_failBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         [loadFailView addSubview:btn];
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.mas_equalTo(CGPointZero);
@@ -102,10 +102,10 @@
     [self.view addSubview:loadFailView];
 }
     
-- (void)MJB_failBtnClicked:(UIButton *)btn {
+- (void)XKX_failBtnClicked:(UIButton *)btn {
     
     [loadFailView removeFromSuperview];
     
-    [self MJB_loadrqu];
+    [self XKX_loadrqu];
 }
 @end

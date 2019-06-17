@@ -1,19 +1,19 @@
 //
-//  MJBWebViewController.m
-//  MJBWeightTool
+//  XKXWebViewController.m
+//  XKXWeightTool
 //
-//  Created by 陈腾飞 on 2019/6/9.
+//  Created by shirly on 2019/6/9.
 //
 
-#import "MJBWebViewController.h"
+#import "XKXWebViewController.h"
 #import "SYDLoadingRemindSer.h"
 #import <Masonry.h>
 
-@interface MJBWebViewController ()<UIWebViewDelegate>
+@interface XKXWebViewController ()<UIWebViewDelegate>
 
 @end
 
-@implementation MJBWebViewController
+@implementation XKXWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

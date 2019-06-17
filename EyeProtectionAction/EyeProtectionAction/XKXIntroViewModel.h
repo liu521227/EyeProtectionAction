@@ -1,15 +1,15 @@
 //
-//  MJBIntroViewModel.h
-//  MJBWeightTool
+//  XKXIntroViewModel.h
+//  XKXWeightTool
 //
-//  Created by 陈腾飞 on 2019/6/9.
+//  Created by shirly on 2019/6/9.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MJBIntroViewModel : NSObject
+@interface XKXIntroViewModel : NSObject
 
 @property (nonatomic, assign) NSInteger advertisingPlace;
 @property (nonatomic, copy) NSString *intro;

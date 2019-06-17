@@ -1,14 +1,14 @@
 
 //
-//  MJBGetIntroRequest.m
-//  MJBWeightTool
+//  XKXGetIntroRequest.m
+//  XKXWeightTool
 //
-//  Created by 陈腾飞 on 2019/6/6.
+//  Created by shirly on 2019/6/6.
 //
 
-#import "MJBGetIntroRequest.h"
+#import "XKXGetIntroRequest.h"
 
-@implementation MJBGetIntroRequest
+@implementation XKXGetIntroRequest
 
 - (NSString *)methodNameForApi:(SYBaseApiRequest *_Nonnull)request {
     return @"plus/post.php";
