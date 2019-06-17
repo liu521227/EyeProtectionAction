@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "48FEBF0022E47DCC6956F822350129C3"
+               BlueprintIdentifier = "AA24AF91DBE99433B44C775CFA26029E"
                BuildableName = "libPGDatePicker.a"
                BlueprintName = "PGDatePicker"
                ReferencedContainer = "container:Pods.xcodeproj">

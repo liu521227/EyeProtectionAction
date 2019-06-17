@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rig-Nd-tkz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rig-Nd-tkz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -352,10 +352,10 @@ Selecting the Orientation of E Mark
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nsc-gh-a9H">
-                                <rect key="frame" x="21" y="30" width="333" height="191"/>
+                                <rect key="frame" x="21" y="30" width="333" height="174"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1AL-PS-3Ht">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="191"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="174"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -365,7 +365,7 @@ Selecting the Orientation of E Mark
                                     <constraint firstItem="1AL-PS-3Ht" firstAttribute="leading" secondItem="Nsc-gh-a9H" secondAttribute="leading" id="Uj7-95-O9p"/>
                                     <constraint firstItem="1AL-PS-3Ht" firstAttribute="centerX" secondItem="Nsc-gh-a9H" secondAttribute="centerX" id="gNH-XG-ST2"/>
                                     <constraint firstItem="1AL-PS-3Ht" firstAttribute="top" secondItem="Nsc-gh-a9H" secondAttribute="top" id="gsR-1a-eag"/>
-                                    <constraint firstAttribute="height" constant="191" id="kgb-bD-FWW"/>
+                                    <constraint firstAttribute="width" secondItem="Nsc-gh-a9H" secondAttribute="height" multiplier="111:58" id="qFY-kD-x4A"/>
                                     <constraint firstAttribute="bottom" secondItem="1AL-PS-3Ht" secondAttribute="bottom" id="yxo-ln-0jU"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -376,7 +376,7 @@ Selecting the Orientation of E Mark
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzD-oi-KmN">
-                                <rect key="frame" x="21" y="323" width="144.5" height="44"/>
+                                <rect key="frame" x="21" y="299" width="144.5" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="FTh-08-4cs"/>
                                 </constraints>
@@ -394,7 +394,7 @@ Selecting the Orientation of E Mark
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CA3-xr-q0J">
-                                <rect key="frame" x="123" y="459" width="129" height="60"/>
+                                <rect key="frame" x="123" y="430" width="129" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Rj1-YE-uzs"/>
                                     <constraint firstAttribute="width" constant="129" id="TGu-Ky-nbM"/>
@@ -413,7 +413,7 @@ Selecting the Orientation of E Mark
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZW-fQ-2Yt">
-                                <rect key="frame" x="209.5" y="313" width="144.5" height="54"/>
+                                <rect key="frame" x="209.5" y="289" width="144.5" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="MLA-1H-84a"/>
                                 </constraints>
@@ -424,10 +424,10 @@ Selecting the Orientation of E Mark
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wM-9C-t7v">
-                                <rect key="frame" x="21" y="248" width="333" height="45"/>
+                                <rect key="frame" x="21" y="229" width="333" height="45"/>
                                 <color key="backgroundColor" red="0.058823529411764705" green="0.15686274509803921" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="C4Z-fk-PNa"/>
+                                    <constraint firstAttribute="width" secondItem="2wM-9C-t7v" secondAttribute="height" multiplier="37:5" id="01C-qd-OOx"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -437,28 +437,28 @@ Selecting the Orientation of E Mark
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-eK-3gj">
-                                <rect key="frame" x="169" y="402" width="37" height="37"/>
+                                <rect key="frame" x="169" y="373" width="37" height="37"/>
                                 <state key="normal" image="bottom"/>
                                 <connections>
                                     <action selector="clickTopBtn:" destination="Wi6-vQ-aUg" eventType="touchUpInside" id="wgs-J4-Ymm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC1-bo-RXH">
-                                <rect key="frame" x="283" y="470.5" width="37" height="37"/>
+                                <rect key="frame" x="272" y="441.5" width="37" height="37"/>
                                 <state key="normal" image="right"/>
                                 <connections>
                                     <action selector="clickRightBtn:" destination="Wi6-vQ-aUg" eventType="touchUpInside" id="BVD-70-RDW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAb-KT-G7j">
-                                <rect key="frame" x="55" y="470.5" width="37" height="37"/>
+                                <rect key="frame" x="66" y="441.5" width="37" height="37"/>
                                 <state key="normal" image="left"/>
                                 <connections>
                                     <action selector="clickLeftBtn:" destination="Wi6-vQ-aUg" eventType="touchUpInside" id="jQC-UU-CXU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMq-mL-r1Y">
-                                <rect key="frame" x="169" y="550" width="37" height="37"/>
+                                <rect key="frame" x="169" y="510" width="37" height="37"/>
                                 <state key="normal" image="top"/>
                                 <connections>
                                     <action selector="clickBottomBtn:" destination="Wi6-vQ-aUg" eventType="touchUpInside" id="X3J-PY-0wD"/>
@@ -468,28 +468,28 @@ Selecting the Orientation of E Mark
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="rHF-6C-SEc" secondAttribute="bottom" id="4wU-LM-AxC"/>
-                            <constraint firstItem="CA3-xr-q0J" firstAttribute="leading" secondItem="sAb-KT-G7j" secondAttribute="trailing" constant="31" id="6TC-hU-8wM"/>
-                            <constraint firstItem="pC1-eK-3gj" firstAttribute="top" secondItem="aZW-fQ-2Yt" secondAttribute="bottom" constant="35" id="72l-sP-ETH"/>
+                            <constraint firstItem="CA3-xr-q0J" firstAttribute="leading" secondItem="sAb-KT-G7j" secondAttribute="trailing" constant="20" id="6TC-hU-8wM"/>
+                            <constraint firstItem="pC1-eK-3gj" firstAttribute="top" secondItem="aZW-fQ-2Yt" secondAttribute="bottom" constant="30" id="72l-sP-ETH"/>
                             <constraint firstItem="CA3-xr-q0J" firstAttribute="top" secondItem="pC1-eK-3gj" secondAttribute="bottom" constant="20" id="8Z9-hG-5gT"/>
                             <constraint firstItem="Vl6-Es-3XV" firstAttribute="trailing" secondItem="Nsc-gh-a9H" secondAttribute="trailing" constant="21" id="8gF-q4-6aV"/>
                             <constraint firstAttribute="trailing" secondItem="rHF-6C-SEc" secondAttribute="trailing" id="CAm-Ka-iIG"/>
-                            <constraint firstItem="JMq-mL-r1Y" firstAttribute="top" secondItem="CA3-xr-q0J" secondAttribute="bottom" constant="31" id="FIX-bI-MTX"/>
-                            <constraint firstItem="2wM-9C-t7v" firstAttribute="top" secondItem="Nsc-gh-a9H" secondAttribute="bottom" constant="27" id="FMG-tl-WDx"/>
+                            <constraint firstItem="JMq-mL-r1Y" firstAttribute="top" secondItem="CA3-xr-q0J" secondAttribute="bottom" constant="20" id="FIX-bI-MTX"/>
+                            <constraint firstItem="2wM-9C-t7v" firstAttribute="top" secondItem="Nsc-gh-a9H" secondAttribute="bottom" constant="25" id="FMG-tl-WDx"/>
                             <constraint firstItem="Nsc-gh-a9H" firstAttribute="leading" secondItem="Vl6-Es-3XV" secondAttribute="leading" constant="21" id="HVf-f7-7b7"/>
                             <constraint firstItem="2wM-9C-t7v" firstAttribute="leading" secondItem="Vl6-Es-3XV" secondAttribute="leading" constant="21" id="HmB-o6-kqN"/>
                             <constraint firstItem="sAb-KT-G7j" firstAttribute="centerY" secondItem="CA3-xr-q0J" secondAttribute="centerY" id="Lx9-Ob-bSm"/>
                             <constraint firstItem="rHF-6C-SEc" firstAttribute="leading" secondItem="ST0-Gk-Yrq" secondAttribute="leading" id="O8r-GI-yot"/>
                             <constraint firstItem="CA3-xr-q0J" firstAttribute="centerX" secondItem="ST0-Gk-Yrq" secondAttribute="centerX" id="RmF-jf-yQU"/>
-                            <constraint firstItem="iC1-bo-RXH" firstAttribute="leading" secondItem="CA3-xr-q0J" secondAttribute="trailing" constant="31" id="Uu9-wz-p0Z"/>
+                            <constraint firstItem="iC1-bo-RXH" firstAttribute="leading" secondItem="CA3-xr-q0J" secondAttribute="trailing" constant="20" id="Uu9-wz-p0Z"/>
                             <constraint firstItem="iC1-bo-RXH" firstAttribute="centerY" secondItem="CA3-xr-q0J" secondAttribute="centerY" id="Y1r-Jd-2Wn"/>
                             <constraint firstItem="pC1-eK-3gj" firstAttribute="centerX" secondItem="ST0-Gk-Yrq" secondAttribute="centerX" id="Ymd-Ef-hj0"/>
                             <constraint firstItem="JMq-mL-r1Y" firstAttribute="centerX" secondItem="ST0-Gk-Yrq" secondAttribute="centerX" id="ZuV-7J-bPd"/>
                             <constraint firstItem="rHF-6C-SEc" firstAttribute="top" secondItem="ST0-Gk-Yrq" secondAttribute="top" id="a58-8m-dZY"/>
-                            <constraint firstItem="aZW-fQ-2Yt" firstAttribute="top" secondItem="2wM-9C-t7v" secondAttribute="bottom" constant="20" id="ail-1q-f3s"/>
+                            <constraint firstItem="aZW-fQ-2Yt" firstAttribute="top" secondItem="2wM-9C-t7v" secondAttribute="bottom" constant="15" id="ail-1q-f3s"/>
                             <constraint firstItem="Vl6-Es-3XV" firstAttribute="trailing" secondItem="2wM-9C-t7v" secondAttribute="trailing" constant="21" id="eCL-rf-2pS"/>
                             <constraint firstItem="Nsc-gh-a9H" firstAttribute="top" secondItem="Vl6-Es-3XV" secondAttribute="top" constant="10" id="go7-nw-nG2"/>
                             <constraint firstItem="Vl6-Es-3XV" firstAttribute="trailing" secondItem="aZW-fQ-2Yt" secondAttribute="trailing" constant="21" id="hTx-hS-kRd"/>
-                            <constraint firstItem="TzD-oi-KmN" firstAttribute="top" secondItem="2wM-9C-t7v" secondAttribute="bottom" constant="30" id="hjL-6U-TQv"/>
+                            <constraint firstItem="TzD-oi-KmN" firstAttribute="top" secondItem="2wM-9C-t7v" secondAttribute="bottom" constant="25" id="hjL-6U-TQv"/>
                             <constraint firstItem="TzD-oi-KmN" firstAttribute="leading" secondItem="Vl6-Es-3XV" secondAttribute="leading" constant="21" id="puL-As-jLn"/>
                             <constraint firstItem="aZW-fQ-2Yt" firstAttribute="width" secondItem="TzD-oi-KmN" secondAttribute="width" id="xcx-CR-nNF"/>
                             <constraint firstItem="aZW-fQ-2Yt" firstAttribute="leading" secondItem="TzD-oi-KmN" secondAttribute="trailing" constant="44" id="yeM-Gf-CeP"/>
@@ -661,7 +661,7 @@ Selecting the Orientation of E Mark
         <image name="top" width="37" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TOX-qo-obu"/>
+        <segue reference="7e7-Ge-0tD"/>
         <segue reference="KNx-yi-56P"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -127,12 +127,12 @@ typedef enum : NSUInteger {
     }
     self.imageData = imageData;
     
-    CGFloat withH = (self.view.frame.size.width - 42 - 116) / 5;
+    CGFloat withH = (self.view.frame.size.width - 42 - 106) / 5;
     // 2.初始化
     self.pickerScollView = [[MLPickerScrollView alloc] init];
     _pickerScollView.itemWidth = withH; //刚好显示5个的宽度
     _pickerScollView.itemHeight = withH;
-    _pickerScollView.firstItemX = (self.view.frame.size.width - 42 - 116) / 2 - 20;
+    _pickerScollView.firstItemX = (self.view.frame.size.width - 42 - 106) / 2 - 20;
     _pickerScollView.dataSource = self;
     _pickerScollView.delegate = self;
     [self.view addSubview:_pickerScollView];
@@ -162,9 +162,9 @@ typedef enum : NSUInteger {
     [self.pointsBtn setTitleEdgeInsets:(UIEdgeInsetsMake(0, 0, 0, 0))];
     [sender setTitleColor:RGBA(15, 40, 120, 1) forState:(UIControlStateNormal)];
     [self.pointsBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-    self.pointsTop.constant = 30;
+    self.pointsTop.constant = 25;
     self.pointsHeight.constant = 44;
-    self.decimalTop.constant = 20;
+    self.decimalTop.constant = 15;
     self.decimalHeight.constant = 54;
     self.decimalBtn.layer.borderWidth = 0;
     self.decimalBtn.layer.masksToBounds = NO;
@@ -184,9 +184,9 @@ typedef enum : NSUInteger {
     [sender setTitleColor:RGBA(15, 40, 120, 1) forState:(UIControlStateNormal)];
     [self.decimalBtn setTitleEdgeInsets:(UIEdgeInsetsMake(0, 0, 0, 0))];
     [self.decimalBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-    self.pointsTop.constant = 20;
+    self.pointsTop.constant = 15;
     self.pointsHeight.constant = 54;
-    self.decimalTop.constant = 30;
+    self.decimalTop.constant = 25;
     self.decimalHeight.constant = 44;
     self.pointsBtn.layer.borderWidth = 0;
     self.pointsBtn.layer.masksToBounds = NO;
