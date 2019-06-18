@@ -52,6 +52,12 @@
                           channel:@"App Store"
                  apsForProduction:1
             advertisingIdentifier:advertisingId];
+    
+    NSArray *languages = [NSLocale preferredLanguages];
+    
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    
+    NSLog(@"%@", currentLanguage);
     return YES;
 }
 

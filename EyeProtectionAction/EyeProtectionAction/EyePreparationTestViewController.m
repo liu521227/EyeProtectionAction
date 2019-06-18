@@ -20,9 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     if ([EyeTool sharedSingleton].isLeftEye == YES) {
-        self.titleL.text = @"Cover your left eye, please.\nSelecting the Orientation of E Mark\nOpening by Sliding Screen";
+        　 NSString *leftStr= NSLocalizedString(@"leftName", nil);  //获取配置语言文字
+           self.titleL.text = leftStr;
     } else {
-        self.titleL.text = @"Cover your right eye, please.\nSelecting the Orientation of E Mark\nOpening by Sliding Screen";
+        NSString *rightStr= NSLocalizedString(@"rightName", nil);
+        self.titleL.text = rightStr;
     }
     [_countdown startCount];
     _countdown.ablock = ^{

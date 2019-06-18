@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  EyeProtectionAction
+
+  Created by Shirly on 2019/6/18.
+  Copyright © 2019 qxk. All rights reserved.
+*/
+"leftName" = "Cover your left eye, please.\nSelecting the Orientation of E Mark\nOpening by Sliding Screen";
+"rightName" = "Cover your right eye, please.\nSelecting the Orientation of E Mark\nOpening by Sliding Screen";
