@@ -50,6 +50,8 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, assign) NSInteger selectIndex;
 
+@property (nonatomic, strong) NSMutableArray *imageEArray;
+
 @end
 
 @implementation EyeStartTestViewController
@@ -94,6 +96,14 @@ typedef enum : NSUInteger {
     return _resultDic;
 }
 
+- (NSMutableArray *)imageEArray
+{
+    if (!_imageEArray) {
+        _imageEArray = [NSMutableArray array];
+    }
+    return _imageEArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.decimalBtn.layer.borderWidth = 2;
@@ -101,9 +111,15 @@ typedef enum : NSUInteger {
     self.invisibilityBtn.layer.borderWidth = 2;
     self.invisibilityBtn.layer.borderColor = RGBA(56, 78, 134, 1).CGColor;
     
-    NSArray *decimalTitleArray = @[@"4.0",@"4.1",@"4.2",@"4.3",@"4.4",@"4.5",@"4.6",@"4.7",@"4.8",@"4.9",@"5.0",@"5.1",@"5.2",@"5.3"];
+    
+    for (NSInteger i = 1; i <= 10; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld",i]];
+        [self.imageEArray addObject:image];
+    }
+    
+    NSArray *decimalTitleArray = @[@"4.0",@"4.3",@"4.5",@"4.6",@"4.7",@"4.9",@"5.0",@"5.1",@"5.2",@"5.3"];
     self.decimalTitleArray = [NSMutableArray arrayWithArray:decimalTitleArray];
-    NSArray *pointsTitleArray = @[@"0.1",@"0.12",@"0.15",@"0.2",@"0.25",@"0.3",@"0.4",@"0.5",@"0.6",@"0.8",@"1.0",@"1.2",@"1.5",@"2.0"];
+    NSArray *pointsTitleArray = @[@"0.1",@"0.2",@"0.3",@"0.4",@"0.5",@"0.8",@"1.0",@"1.2",@"1.5",@"2.0"];
     self.pointsTitleArray = [NSMutableArray arrayWithArray:pointsTitleArray];
     for (int i = 0; i < decimalTitleArray.count; i++) {
         MLDemoModel *model = [[MLDemoModel alloc] init];
@@ -122,7 +138,8 @@ typedef enum : NSUInteger {
     }
     NSMutableDictionary *imageData = [NSMutableDictionary new];
     for (NSInteger i = 0; i < self.data.count; i++) {
-        NSArray *dataArr = @[@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld上",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeTop)},@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld左",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeLeft)},@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld下",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeBottom)},@{@"image":[self zd_imageWithColor:[UIColor orangeColor] size:CGSizeMake(50, 50) text:[NSString stringWithFormat:@"%ld右",i] textAttributes:nil circular:YES],@"orientation":@(EyeImageOrientationTypeRight)}];
+        UIImage *image = self.imageEArray[i];
+        NSArray *dataArr = @[@{@"image":[UIImage imageWithCGImage:image.CGImage scale:image.scale orientation:UIImageOrientationLeft],@"orientation":@(EyeImageOrientationTypeTop)},@{@"image":[UIImage imageWithCGImage:image.CGImage scale:image.scale orientation:UIImageOrientationDown],@"orientation":@(EyeImageOrientationTypeLeft)},@{@"image":[UIImage imageWithCGImage:image.CGImage scale:image.scale orientation:UIImageOrientationRight],@"orientation":@(EyeImageOrientationTypeBottom)},@{@"image":image,@"orientation":@(EyeImageOrientationTypeRight)}];
         imageData[[NSString stringWithFormat:@"%ld",i]] = dataArr;
     }
     self.imageData = imageData;
@@ -252,7 +269,6 @@ typedef enum : NSUInteger {
     }
     if ([EyeTool sharedSingleton].isLeftEye == NO) {
         [EyeTool sharedSingleton].isLeftEye = YES;
-        NSLog(@"开始左眼测试");
         [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
         [self performSegueWithIdentifier:@"seleteEye"sender:self];
     } else {
@@ -268,7 +284,6 @@ typedef enum : NSUInteger {
             }
         }
         [EyeTool sharedSingleton].testResultDic[@"leftTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
-        NSLog(@"结束");
         [self performSegueWithIdentifier:@"EyeTestResult"sender:self];
     }
 }
@@ -318,48 +333,5 @@ typedef enum : NSUInteger {
 {
     [item backSizeOfItem];
 }
-
-/**
- 绘制图片
- 
- @param color 背景色
- @param size 大小
- @param text 文字
- @param textAttributes 字体设置
- @param isCircular 是否圆形
- @return 图片
- */
-- (UIImage *)zd_imageWithColor:(UIColor *)color
-                          size:(CGSize)size
-                          text:(NSString *)text
-                textAttributes:(NSDictionary *)textAttributes
-                      circular:(BOOL)isCircular
-{
-    if (!color || size.width <= 0 || size.height <= 0) return nil;
-    CGRect rect = CGRectMake(0, 0, size.width, size.height);
-    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    // circular
-    if (isCircular) {
-        CGPathRef path = CGPathCreateWithEllipseInRect(rect, NULL);
-        CGContextAddPath(context, path);
-        CGContextClip(context);
-        CGPathRelease(path);
-    }
-    
-    // color
-    CGContextSetFillColorWithColor(context, color.CGColor);
-    CGContextFillRect(context, rect);
-    
-    // text
-    CGSize textSize = [text sizeWithAttributes:textAttributes];
-    [text drawInRect:CGRectMake((size.width - textSize.width) / 2, (size.height - textSize.height) / 2, textSize.width, textSize.height) withAttributes:textAttributes];
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
-
 
 @end

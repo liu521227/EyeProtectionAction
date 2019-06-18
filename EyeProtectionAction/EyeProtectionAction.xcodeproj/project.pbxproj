@@ -405,7 +405,6 @@
 				"${PODS_ROOT}/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PGDatePicker.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
