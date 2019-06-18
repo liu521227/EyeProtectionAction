@@ -1,0 +1,75 @@
+
+/* Class = "UINavigationItem"; title = "Preparation test"; ObjectID = "A8T-DK-CCP"; */
+"A8T-DK-CCP.title" = "准备测试";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "Be5-PK-KRh"; */
+"Be5-PK-KRh.text" = "3";
+
+/* Class = "UILabel"; text = "left eye"; ObjectID = "Buk-lV-YnB"; */
+"Buk-lV-YnB.text" = "左眼";
+
+/* Class = "UIButton"; normalTitle = "Invisibility"; ObjectID = "CA3-xr-q0J"; */
+"CA3-xr-q0J.normalTitle" = "看不清";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DB1-8c-ZaM"; */
+"DB1-8c-ZaM.text" = "";
+
+/* Class = "UILabel"; text = "right eye"; ObjectID = "DfH-xP-hgn"; */
+"DfH-xP-hgn.text" = "右眼";
+
+/* Class = "UILabel"; text = "Cover your left eye, please.\nSelecting the Orientation of E Mark\n Opening by Sliding Screen"; ObjectID = "JgY-Yh-LcU"; */
+"JgY-Yh-LcU.text" = "请遮住您的左眼。\n用滑动屏幕选择e标记打开的方向";
+
+/* Class = "UINavigationItem"; title = "PreparationTest"; ObjectID = "SRI-Om-ZAh"; */
+"SRI-Om-ZAh.title" = "准备测试";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "Tkf-Op-xLL"; */
+"Tkf-Op-xLL.normalTitle" = "开始";
+
+/* Class = "UIButton"; normalTitle = "decimal"; ObjectID = "TzD-oi-KmN"; */
+"TzD-oi-KmN.normalTitle" = "小数";
+
+/* Class = "UILabel"; text = "The arm naturally straightens and chooses the opening direction of the E mark through the upper line or left. If you can't see clearly, you can't see clearly."; ObjectID = "Z2c-YH-1Ma"; */
+"Z2c-YH-1Ma.text" = "手臂自然伸直，并通过上方的线或左侧选择E标记的打开方向。如果你看不清楚，你就看不清楚。";
+
+/* Class = "UIButton"; normalTitle = "5 points"; ObjectID = "aZW-fQ-2Yt"; */
+"aZW-fQ-2Yt.normalTitle" = "五分";
+
+/* Class = "UIButton"; normalTitle = "You know, start testing"; ObjectID = "bDh-VV-NKC"; */
+"bDh-VV-NKC.normalTitle" = "知道了，开始测试";
+
+/* Class = "UIButton"; normalTitle = "Sure?"; ObjectID = "c49-P2-wpJ"; */
+"c49-P2-wpJ.normalTitle" = "确定?";
+
+/* Class = "UILabel"; text = "Results of this test"; ObjectID = "eLc-wZ-uo7"; */
+"eLc-wZ-uo7.text" = "本次测试结果";
+
+/* Class = "UINavigationItem"; title = "Instructions"; ObjectID = "et5-KA-0Uz"; */
+"et5-KA-0Uz.title" = "说明";
+
+/* Class = "UILabel"; text = "Through a large number of tests and correct use of the software, the visual acuity error is within 0.1."; ObjectID = "fm8-mm-fAm"; */
+"fm8-mm-fAm.text" = "通过大量的测试和软件的正确使用，视力误差在0.1以内。";
+
+/* Class = "UIButton"; normalTitle = "Instructions for Use+"; ObjectID = "hIx-Q1-6xc"; */
+"hIx-Q1-6xc.normalTitle" = "使用说明书";
+
+/* Class = "UILabel"; text = "Sliding scale up and down to choose your height"; ObjectID = "lQd-oy-r5L"; */
+"lQd-oy-r5L.text" = "上下滑动可选择您的身高";
+
+/* Class = "UINavigationItem"; title = "Instructions"; ObjectID = "ll0-af-rLA"; */
+"ll0-af-rLA.title" = "说明";
+
+/* Class = "UIButton"; normalTitle = "Sure?"; ObjectID = "nXL-mj-bF2"; */
+"nXL-mj-bF2.normalTitle" = "确定?";
+
+/* Class = "UINavigationItem"; title = "Current view"; ObjectID = "qwv-rZ-TBu"; */
+"qwv-rZ-TBu.title" = "当前视图";
+
+/* Class = "UILabel"; text = "Vision Test"; ObjectID = "xlm-Q2-V3u"; */
+"xlm-Q2-V3u.text" = "视力测试";
+
+/* Class = "UILabel"; text = "Due to the high requirement of visual acuity test for mobile screen, it is recommended that the user's mobile screen should be above 4.7 inches and resolution should be at least 1280*720 pixels."; ObjectID = "y4n-3S-4X3"; */
+"y4n-3S-4X3.text" = "由于对手机屏幕的视力测试要求较高，建议用户手机屏幕应在4.7英寸以上，分辨率至少为1280*720像素。";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ztz-1M-jYa"; */
+"ztz-1M-jYa.text" = "";

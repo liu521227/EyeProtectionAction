@@ -1,0 +1,75 @@
+
+/* Class = "UINavigationItem"; title = "Preparation test"; ObjectID = "A8T-DK-CCP"; */
+"A8T-DK-CCP.title" = "Preparation test";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "Be5-PK-KRh"; */
+"Be5-PK-KRh.text" = "3";
+
+/* Class = "UILabel"; text = "left eye"; ObjectID = "Buk-lV-YnB"; */
+"Buk-lV-YnB.text" = "left eye";
+
+/* Class = "UIButton"; normalTitle = "Invisibility"; ObjectID = "CA3-xr-q0J"; */
+"CA3-xr-q0J.normalTitle" = "Invisibility";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DB1-8c-ZaM"; */
+"DB1-8c-ZaM.text" = "Label";
+
+/* Class = "UILabel"; text = "right eye"; ObjectID = "DfH-xP-hgn"; */
+"DfH-xP-hgn.text" = "right eye";
+
+/* Class = "UILabel"; text = "Cover your left eye, please.\nSelecting the Orientation of E Mark\n Opening by Sliding Screen"; ObjectID = "JgY-Yh-LcU"; */
+"JgY-Yh-LcU.text" = "Cover your left eye, please.\nSelecting the Orientation of E Mark\n Opening by Sliding Screen";
+
+/* Class = "UINavigationItem"; title = "PreparationTest"; ObjectID = "SRI-Om-ZAh"; */
+"SRI-Om-ZAh.title" = "PreparationTest";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "Tkf-Op-xLL"; */
+"Tkf-Op-xLL.normalTitle" = "Start";
+
+/* Class = "UIButton"; normalTitle = "decimal"; ObjectID = "TzD-oi-KmN"; */
+"TzD-oi-KmN.normalTitle" = "decimal";
+
+/* Class = "UILabel"; text = "The arm naturally straightens and chooses the opening direction of the E mark through the upper line or left. If you can't see clearly, you can't see clearly."; ObjectID = "Z2c-YH-1Ma"; */
+"Z2c-YH-1Ma.text" = "The arm naturally straightens and chooses the opening direction of the E mark through the upper line or left. If you can't see clearly, you can't see clearly.";
+
+/* Class = "UIButton"; normalTitle = "5 points"; ObjectID = "aZW-fQ-2Yt"; */
+"aZW-fQ-2Yt.normalTitle" = "5 points";
+
+/* Class = "UIButton"; normalTitle = "You know, start testing"; ObjectID = "bDh-VV-NKC"; */
+"bDh-VV-NKC.normalTitle" = "You know, start testing";
+
+/* Class = "UIButton"; normalTitle = "Sure?"; ObjectID = "c49-P2-wpJ"; */
+"c49-P2-wpJ.normalTitle" = "Sure?";
+
+/* Class = "UILabel"; text = "Results of this test"; ObjectID = "eLc-wZ-uo7"; */
+"eLc-wZ-uo7.text" = "Results of this test";
+
+/* Class = "UINavigationItem"; title = "Instructions"; ObjectID = "et5-KA-0Uz"; */
+"et5-KA-0Uz.title" = "Instructions";
+
+/* Class = "UILabel"; text = "Through a large number of tests and correct use of the software, the visual acuity error is within 0.1."; ObjectID = "fm8-mm-fAm"; */
+"fm8-mm-fAm.text" = "Through a large number of tests and correct use of the software, the visual acuity error is within 0.1.";
+
+/* Class = "UIButton"; normalTitle = "Instructions for Use+"; ObjectID = "hIx-Q1-6xc"; */
+"hIx-Q1-6xc.normalTitle" = "Instructions for Use+";
+
+/* Class = "UILabel"; text = "Sliding scale up and down to choose your height"; ObjectID = "lQd-oy-r5L"; */
+"lQd-oy-r5L.text" = "Sliding scale up and down to choose your height";
+
+/* Class = "UINavigationItem"; title = "Instructions"; ObjectID = "ll0-af-rLA"; */
+"ll0-af-rLA.title" = "Instructions";
+
+/* Class = "UIButton"; normalTitle = "Sure?"; ObjectID = "nXL-mj-bF2"; */
+"nXL-mj-bF2.normalTitle" = "Sure?";
+
+/* Class = "UINavigationItem"; title = "Current view"; ObjectID = "qwv-rZ-TBu"; */
+"qwv-rZ-TBu.title" = "Current view";
+
+/* Class = "UILabel"; text = "Vision Test"; ObjectID = "xlm-Q2-V3u"; */
+"xlm-Q2-V3u.text" = "Vision Test";
+
+/* Class = "UILabel"; text = "Due to the high requirement of visual acuity test for mobile screen, it is recommended that the user's mobile screen should be above 4.7 inches and resolution should be at least 1280*720 pixels."; ObjectID = "y4n-3S-4X3"; */
+"y4n-3S-4X3.text" = "Due to the high requirement of visual acuity test for mobile screen, it is recommended that the user's mobile screen should be above 4.7 inches and resolution should be at least 1280*720 pixels.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ztz-1M-jYa"; */
+"ztz-1M-jYa.text" = "Label";
