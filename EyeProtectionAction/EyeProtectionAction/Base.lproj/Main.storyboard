@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rig-Nd-tkz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rig-Nd-tkz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -355,7 +355,7 @@ Selecting the Orientation of E Mark
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nsc-gh-a9H">
-                                <rect key="frame" x="21" y="30" width="333" height="174"/>
+                                <rect key="frame" x="21" y="74" width="333" height="174"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="1AL-PS-3Ht">
                                         <rect key="frame" x="149.5" y="69.5" width="34" height="35"/>
@@ -375,7 +375,7 @@ Selecting the Orientation of E Mark
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzD-oi-KmN">
-                                <rect key="frame" x="21" y="299" width="144.5" height="44"/>
+                                <rect key="frame" x="21" y="343" width="144.5" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="FTh-08-4cs"/>
                                 </constraints>
@@ -393,7 +393,7 @@ Selecting the Orientation of E Mark
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CA3-xr-q0J">
-                                <rect key="frame" x="123" y="430" width="129" height="60"/>
+                                <rect key="frame" x="123" y="474" width="129" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Rj1-YE-uzs"/>
                                     <constraint firstAttribute="width" constant="129" id="TGu-Ky-nbM"/>
@@ -412,7 +412,7 @@ Selecting the Orientation of E Mark
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZW-fQ-2Yt">
-                                <rect key="frame" x="209.5" y="289" width="144.5" height="54"/>
+                                <rect key="frame" x="209.5" y="333" width="144.5" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="MLA-1H-84a"/>
                                 </constraints>
@@ -423,7 +423,7 @@ Selecting the Orientation of E Mark
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wM-9C-t7v">
-                                <rect key="frame" x="21" y="229" width="333" height="45"/>
+                                <rect key="frame" x="21" y="273" width="333" height="45"/>
                                 <color key="backgroundColor" red="0.058823529411764705" green="0.15686274509803921" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2wM-9C-t7v" secondAttribute="height" multiplier="37:5" id="01C-qd-OOx"/>
@@ -436,28 +436,28 @@ Selecting the Orientation of E Mark
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-eK-3gj">
-                                <rect key="frame" x="169" y="373" width="37" height="37"/>
+                                <rect key="frame" x="169" y="417" width="37" height="37"/>
                                 <state key="normal" image="bottom"/>
                                 <connections>
                                     <action selector="clickTopBtn:" destination="Wi6-vQ-aUg" eventType="touchUpInside" id="wgs-J4-Ymm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC1-bo-RXH">
-                                <rect key="frame" x="272" y="441.5" width="37" height="37"/>
+                                <rect key="frame" x="272" y="485.5" width="37" height="37"/>
                                 <state key="normal" image="right"/>
                                 <connections>
                                     <action selector="clickRightBtn:" destination="Wi6-vQ-aUg" eventType="touchUpInside" id="BVD-70-RDW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAb-KT-G7j">
-                                <rect key="frame" x="66" y="441.5" width="37" height="37"/>
+                                <rect key="frame" x="66" y="485.5" width="37" height="37"/>
                                 <state key="normal" image="left"/>
                                 <connections>
                                     <action selector="clickLeftBtn:" destination="Wi6-vQ-aUg" eventType="touchUpInside" id="jQC-UU-CXU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMq-mL-r1Y">
-                                <rect key="frame" x="169" y="510" width="37" height="37"/>
+                                <rect key="frame" x="169" y="554" width="37" height="37"/>
                                 <state key="normal" image="top"/>
                                 <connections>
                                     <action selector="clickBottomBtn:" destination="Wi6-vQ-aUg" eventType="touchUpInside" id="X3J-PY-0wD"/>
@@ -526,51 +526,51 @@ Selecting the Orientation of E Mark
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results of this test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLc-wZ-uo7">
-                                <rect key="frame" x="0.0" y="70" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="left eye" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buk-lV-YnB">
-                                <rect key="frame" x="52" y="171" width="57" height="21"/>
+                                <rect key="frame" x="52" y="215" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DB1-8c-ZaM">
-                                <rect key="frame" x="281" y="171" width="42" height="21"/>
+                                <rect key="frame" x="281" y="215" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztz-1M-jYa">
-                                <rect key="frame" x="281" y="242" width="42" height="21"/>
+                                <rect key="frame" x="281" y="286" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="right eye" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfH-xP-hgn">
-                                <rect key="frame" x="52" y="242" width="67" height="21"/>
+                                <rect key="frame" x="52" y="286" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDI-hH-IZb">
-                                <rect key="frame" x="52" y="207" width="271" height="2"/>
+                                <rect key="frame" x="52" y="251" width="271" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="4ii-lr-qcQ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz3-1V-6zo">
-                                <rect key="frame" x="52" y="278" width="271" height="2"/>
+                                <rect key="frame" x="52" y="322" width="271" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="5Bd-Ps-TtE"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXL-mj-bF2">
-                                <rect key="frame" x="66" y="368" width="243" height="45"/>
+                                <rect key="frame" x="66" y="412" width="243" height="45"/>
                                 <color key="backgroundColor" red="0.72549019607843135" green="0.80784313725490198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="DEt-3Q-rVv"/>
@@ -661,7 +661,7 @@ Selecting the Orientation of E Mark
         <image name="top" width="37" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7e7-Ge-0tD"/>
+        <segue reference="TOX-qo-obu"/>
         <segue reference="FIr-O5-zsV"/>
     </inferredMetricsTieBreakers>
 </document>

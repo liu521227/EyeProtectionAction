@@ -61,7 +61,15 @@
             make.height.mas_equalTo(322);
             make.width.mas_equalTo(130);
         }];
-    }else {
+    }else if (kScreenBoundWidth < 376) {
+        self.titleLeft.constant = E_Scale_Value(140);
+        [self.pgPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_topLayoutGuideBottom).offset(43);
+            make.right.mas_equalTo(-10);
+            make.height.mas_equalTo(322);
+            make.width.mas_equalTo(130);
+        }];
+    } else {
         self.titleLeft.constant = E_Scale_Value(145);
         [self.pgPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.mas_topLayoutGuideBottom).offset(47);
@@ -70,8 +78,7 @@
             make.width.mas_equalTo(150);
         }];
     }
-    [self.pgPickerView selectRow:98 inComponent:0 animated:YES];
-    [self pickerView:self.pgPickerView didSelectRow:98 inComponent:0];
+    [self.pgPickerView selectRow:98 inComponent:0 animated:NO];
 
 }
 

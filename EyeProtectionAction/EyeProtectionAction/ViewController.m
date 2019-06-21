@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "EyeTool.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface ViewController ()
 
@@ -22,6 +23,17 @@
     [[EyeTool sharedSingleton].testResultDic removeAllObjects];
     [EyeTool sharedSingleton].isLeftEye = NO;
     [EyeTool sharedSingleton].isDecimal = NO;
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager POST:@"" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+        NSLog(@"post返回结果：\n %@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+
+        NSLog(@"请求失败 %@",error);
+
+    }];
 }
 
 - (void)viewDidLoad {
