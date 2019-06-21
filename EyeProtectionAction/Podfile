@@ -4,12 +4,10 @@ platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
 def shared_pods
-  pod 'AFNetworking'  
   pod 'Masonry'
   pod 'PGDatePicker'
   pod 'RTRootNavigationController'
   pod 'JPush'
-  pod 'YYModel'
   
 end
 
