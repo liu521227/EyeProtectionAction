@@ -7,106 +7,106 @@
 //
 
 #import "AppDelegate.h"
-// 引入 JPush 功能所需头文件
-#import "JPUSHService.h"
-// iOS10 注册 APNs 所需头文件
-#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import "XGPush.h"
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
 #import <UserNotifications/UserNotifications.h>
 #endif
-// 如果需要使用 idfa 功能所需要引入的头文件（可选）
-#import <AdSupport/AdSupport.h>
-
-@interface AppDelegate ()<JPUSHRegisterDelegate>
+@interface AppDelegate ()<XGPushDelegate>
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    //Required
-    //notice: 3.0.0 及以后版本注册可以这样写，也可以继续用之前的注册方式
-    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    if (@available(iOS 12.0, *)) {
-        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|JPAuthorizationOptionProvidesAppNotificationSettings;
-    } else {
-        // Fallback on earlier versions
-        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    [[XGPush defaultManager]setEnableDebug:YES];
+    [[XGPush defaultManager] startXGWithAppID:2200336927 appKey:@"I458XE1FH8WK" delegate:self];
+    // 清除角标
+    if ([XGPush defaultManager].xgApplicationBadgeNumber > 0) {
+        [[XGPush defaultManager] setXgApplicationBadgeNumber:0];
     }
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-        // 可以添加自定义 categories
-        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
-        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
-    }
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    // Optional
-    // 获取 IDFA
-    // 如需使用 IDFA 功能请添加此代码并在初始化方法的 advertisingIdentifier 参数中填写对应值
-    NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    
-    // Required
-    // init Push
-    // notice: 2.1.5 版本的 SDK 新增的注册方法，改成可上报 IDFA，如果没有使用 IDFA 直接传 nil
-    [JPUSHService setupWithOption:launchOptions appKey:@"09d1a0dbd8dda193f2a0106c"
-                          channel:@"App Store"
-                 apsForProduction:1
-            advertisingIdentifier:advertisingId];
-    
-
+    [[XGPush defaultManager] reportXGNotificationInfo:launchOptions];
     return YES;
 }
 
+/**
+ @brief 监控信鸽推送服务地启动情况
+ 
+ @param isSuccess 信鸽推送是否启动成功
+ @param error 信鸽推送启动错误的信息
+ */
+- (void)xgPushDidFinishStart:(BOOL)isSuccess error:(nullable NSError *)error{
+    NSLog(@"-=--%@",error);
+}
+
+/**
+ @brief 向信鸽服务器注册设备token的回调
+ 
+ @param deviceToken 当前设备的token
+ @param error 错误信息
+ @note 当前的token已经注册过之后，将不会再调用此方法
+ */
+- (void)xgPushDidRegisteredDeviceToken:(nullable NSString *)deviceToken error:(nullable NSError *)error{
+    NSLog(@"====%@",error);
+}
+
+/**
+ 收到推送的回调
+ @param application  UIApplication 实例
+ @param userInfo 推送时指定的参数
+ @param completionHandler 完成回调
+ */
 - (void)application:(UIApplication *)application
-didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    
-    /// Required - 注册 DeviceToken
-    [JPUSHService registerDeviceToken:deviceToken];
-}
-
-#pragma mark- JPUSHRegisterDelegate
-
-// iOS 12 Support
-- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification{
-    if (notification && [notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        //从通知界面直接进入应用
-    }else{
-        //从通知设置界面进入应用
-    }
-}
-
-// iOS 10 Support
-- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
-    // Required
-    NSDictionary * userInfo = notification.request.content.userInfo;
-    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        [JPUSHService handleRemoteNotification:userInfo];
-    }
-    completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有 Badge、Sound、Alert 三种类型可以选择设置
-}
-
-// iOS 10 Support
-- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
-    // Required
-    NSDictionary * userInfo = response.notification.request.content.userInfo;
-    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        [JPUSHService handleRemoteNotification:userInfo];
-    }
-    completionHandler();  // 系统要求执行这个方法
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    
-    // Required, iOS 7 Support
-    [JPUSHService handleRemoteNotification:userInfo];
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    [[XGPush defaultManager] reportXGNotificationInfo:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+// iOS 10 新增 API
+// iOS 10 会走新 API, iOS 10 以前会走到老 API
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
+// App 用户点击通知
+// App 用户选择通知中的行为
+// App 用户在通知中心清除消息
+// 无论本地推送还是远程推送都会走这个回调
+- (void)xgPushUserNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+    NSLog(@"[XGDemo] click notification");
+    if ([response.actionIdentifier isEqualToString:@"xgaction001"]) {
+        NSLog(@"click from Action1");
+    } else if ([response.actionIdentifier isEqualToString:@"xgaction002"]) {
+        NSLog(@"click from Action2");
+    }
     
-    // Required, For systems with less than or equal to iOS 6
-    [JPUSHService handleRemoteNotification:userInfo];
+    [[XGPush defaultManager] reportXGNotificationResponse:response];
+    
+    completionHandler();
 }
+#endif
+
+/**
+ 统一收到通知消息的回调
+ @param notification 消息对象
+ @param completionHandler 完成回调
+ @note SDK 3.2.0+
+ */
+- (void)xgPushDidReceiveRemoteNotification:(id)notification withCompletionHandler:(void (^)(NSUInteger))completionHandler {
+    if ([notification isKindOfClass:[NSDictionary class]]) {
+        [[XGPush defaultManager] reportXGNotificationInfo:(NSDictionary *)notification];
+        completionHandler(UIBackgroundFetchResultNewData);
+    } else if ([notification isKindOfClass:[UNNotification class]]) {
+        [[XGPush defaultManager] reportXGNotificationInfo:((UNNotification *)notification).request.content.userInfo];
+        completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
+    }
+}
+
+- (void)xgPushDidSetBadge:(BOOL)isSuccess error:(NSError *)error {
+    NSLog(@"%s, result %@, error %@", __FUNCTION__, error?@"NO":@"OK", error);
+}
+
+
+#pragma mark - UIApplicationDelegate
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

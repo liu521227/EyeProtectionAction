@@ -7,8 +7,6 @@ def shared_pods
   pod 'Masonry'
   pod 'PGDatePicker'
   pod 'RTRootNavigationController'
-  pod 'JPush'
-  
 end
 
 target 'EyeProtectionAction' do

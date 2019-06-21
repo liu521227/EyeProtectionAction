@@ -24,6 +24,12 @@
 		44884E4522A61EF00033FBB9 /* MLPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E4022A61EF00033FBB9 /* MLPickerItem.m */; };
 		448DD8BE22994D20003673EA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8BD22994D20003673EA /* BaseViewController.m */; };
 		448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */; };
+		44CBE6BA22BC83D300D5507F /* libXG-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6B422BC83D300D5507F /* libXG-SDK.a */; };
+		44CBE6BE22BC842500D5507F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6BD22BC842500D5507F /* CoreTelephony.framework */; };
+		44CBE6C022BC842F00D5507F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6BF22BC842F00D5507F /* SystemConfiguration.framework */; };
+		44CBE6C222BC843A00D5507F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6C122BC843A00D5507F /* UserNotifications.framework */; };
+		44CBE6C422BC845700D5507F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6C322BC845700D5507F /* libsqlite3.0.tbd */; };
+		44CBE6C622BC846100D5507F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6C522BC846100D5507F /* libz.tbd */; };
 		44FAD48C22B659DD0027591A /* EyeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FAD48B22B659DD0027591A /* EyeTool.m */; };
 		44FAD49222B67CB20027591A /* EyeTestResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FAD49122B67CB20027591A /* EyeTestResultViewController.m */; };
 		44FFEB0A22A11B4300A0C07D /* EyeInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FFEB0922A11B4300A0C07D /* EyeInstructionsViewController.m */; };
@@ -84,6 +90,13 @@
 		448DD8BD22994D20003673EA /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		448DD8BF22994D5A003673EA /* EyeSelectHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeSelectHeightViewController.h; sourceTree = "<group>"; };
 		448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeSelectHeightViewController.m; sourceTree = "<group>"; };
+		44CBE6B222BC83D300D5507F /* XGPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGPush.h; sourceTree = "<group>"; };
+		44CBE6B422BC83D300D5507F /* libXG-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libXG-SDK.a"; sourceTree = "<group>"; };
+		44CBE6BD22BC842500D5507F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		44CBE6BF22BC842F00D5507F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		44CBE6C122BC843A00D5507F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		44CBE6C322BC845700D5507F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		44CBE6C522BC846100D5507F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		44FAD48A22B659DD0027591A /* EyeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeTool.h; sourceTree = "<group>"; };
 		44FAD48B22B659DD0027591A /* EyeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeTool.m; sourceTree = "<group>"; };
 		44FAD49022B67CB20027591A /* EyeTestResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EyeTestResultViewController.h; sourceTree = "<group>"; };
@@ -112,7 +125,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44CBE6C622BC846100D5507F /* libz.tbd in Frameworks */,
+				44CBE6C422BC845700D5507F /* libsqlite3.0.tbd in Frameworks */,
+				44CBE6C222BC843A00D5507F /* UserNotifications.framework in Frameworks */,
+				44CBE6C022BC842F00D5507F /* SystemConfiguration.framework in Frameworks */,
+				44CBE6BE22BC842500D5507F /* CoreTelephony.framework in Frameworks */,
 				35A21FFB420342E5E1E9306D /* libPods-EyeProtectionAction.a in Frameworks */,
+				44CBE6BA22BC83D300D5507F /* libXG-SDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				447C23A222B789FA00B3F309 /* EyeProtectionAction.entitlements */,
+				44CBE6B122BC83D300D5507F /* sdk */,
 				A34FC95322B757E600F63D5F /* SystemMacro.h */,
 				44884E3622A61EF00033FBB9 /* pickView */,
 				4447722C229828260062AEDC /* AppDelegate.h */,
@@ -227,6 +247,15 @@
 			path = pickView;
 			sourceTree = "<group>";
 		};
+		44CBE6B122BC83D300D5507F /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				44CBE6B222BC83D300D5507F /* XGPush.h */,
+				44CBE6B422BC83D300D5507F /* libXG-SDK.a */,
+			);
+			path = sdk;
+			sourceTree = "<group>";
+		};
 		B73952F3E94F73DADFA738FF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +268,11 @@
 		BAA847F20194F913AB2BA596 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44CBE6C522BC846100D5507F /* libz.tbd */,
+				44CBE6C322BC845700D5507F /* libsqlite3.0.tbd */,
+				44CBE6C122BC843A00D5507F /* UserNotifications.framework */,
+				44CBE6BF22BC842F00D5507F /* SystemConfiguration.framework */,
+				44CBE6BD22BC842500D5507F /* CoreTelephony.framework */,
 				7027C103036258A8241AF197 /* libPods-EyeProtectionAction.a */,
 			);
 			name = Frameworks;
@@ -314,6 +348,9 @@
 					44477228229828260062AEDC = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -647,6 +684,38 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EyeProtectionAction/sdk",
+					"$(PROJECT_DIR)/EyeProtectionAction/sdk/extesion",
+					"$(PROJECT_DIR)/EyeProtectionAction/sdk/idfa",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"PGDatePicker\"",
+					"-l\"PGPickerView\"",
+					"-l\"RTRootNavigationController\"",
+					"-l\"resolv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -669,6 +738,38 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EyeProtectionAction/sdk",
+					"$(PROJECT_DIR)/EyeProtectionAction/sdk/extesion",
+					"$(PROJECT_DIR)/EyeProtectionAction/sdk/idfa",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"PGDatePicker\"",
+					"-l\"PGPickerView\"",
+					"-l\"RTRootNavigationController\"",
+					"-l\"resolv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eye.EyeProtectionAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
