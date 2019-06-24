@@ -1,9 +1,0 @@
-/* 
-  Localizable.strings
-  EyeProtectionAction
-
-  Created by Shirly on 2019/6/18.
-  Copyright © 2019 qxk. All rights reserved.
-*/
-"leftName" = "请遮住您的左眼。\n用滑动屏幕选择E标记打开的方向";
-"rightName" = "请遮住您的右眼。\n用滑动屏幕选择E标记打开的方向";

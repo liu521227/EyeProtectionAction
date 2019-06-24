@@ -19,13 +19,13 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[XGPush defaultManager]setEnableDebug:YES];
-    [[XGPush defaultManager] startXGWithAppID:2200336927 appKey:@"I458XE1FH8WK" delegate:self];
-    // 清除角标
-    if ([XGPush defaultManager].xgApplicationBadgeNumber > 0) {
-        [[XGPush defaultManager] setXgApplicationBadgeNumber:0];
-    }
-    [[XGPush defaultManager] reportXGNotificationInfo:launchOptions];
+//    [[XGPush defaultManager]setEnableDebug:YES];
+//    [[XGPush defaultManager] startXGWithAppID:2200336927 appKey:@"I458XE1FH8WK" delegate:self];
+//    // 清除角标
+//    if ([XGPush defaultManager].xgApplicationBadgeNumber > 0) {
+//        [[XGPush defaultManager] setXgApplicationBadgeNumber:0];
+//    }
+//    [[XGPush defaultManager] reportXGNotificationInfo:launchOptions];
     return YES;
 }
 
