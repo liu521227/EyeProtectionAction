@@ -24,7 +24,6 @@
 		44884E4522A61EF00033FBB9 /* MLPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E4022A61EF00033FBB9 /* MLPickerItem.m */; };
 		448DD8BE22994D20003673EA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8BD22994D20003673EA /* BaseViewController.m */; };
 		448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */; };
-		44CBE6BA22BC83D300D5507F /* libXG-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6B422BC83D300D5507F /* libXG-SDK.a */; };
 		44CBE6BE22BC842500D5507F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6BD22BC842500D5507F /* CoreTelephony.framework */; };
 		44CBE6C022BC842F00D5507F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6BF22BC842F00D5507F /* SystemConfiguration.framework */; };
 		44CBE6C222BC843A00D5507F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6C122BC843A00D5507F /* UserNotifications.framework */; };
@@ -70,7 +69,6 @@
 		4447724C229828280062AEDC /* EyeProtectionActionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeProtectionActionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44477250229828280062AEDC /* EyeProtectionActionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeProtectionActionUITests.m; sourceTree = "<group>"; };
 		44477252229828280062AEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		447C23A222B789FA00B3F309 /* EyeProtectionAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EyeProtectionAction.entitlements; sourceTree = "<group>"; };
 		447C252322B8CCF400B3F309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44884E3322A53FB00033FBB9 /* EyeStartTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeStartTestViewController.h; sourceTree = "<group>"; };
 		44884E3422A53FB00033FBB9 /* EyeStartTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeStartTestViewController.m; sourceTree = "<group>"; };
@@ -88,8 +86,6 @@
 		448DD8BD22994D20003673EA /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		448DD8BF22994D5A003673EA /* EyeSelectHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeSelectHeightViewController.h; sourceTree = "<group>"; };
 		448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeSelectHeightViewController.m; sourceTree = "<group>"; };
-		44CBE6B222BC83D300D5507F /* XGPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGPush.h; sourceTree = "<group>"; };
-		44CBE6B422BC83D300D5507F /* libXG-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libXG-SDK.a"; sourceTree = "<group>"; };
 		44CBE6BD22BC842500D5507F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		44CBE6BF22BC842F00D5507F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		44CBE6C122BC843A00D5507F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
@@ -123,7 +119,6 @@
 				44CBE6C022BC842F00D5507F /* SystemConfiguration.framework in Frameworks */,
 				44CBE6BE22BC842500D5507F /* CoreTelephony.framework in Frameworks */,
 				35A21FFB420342E5E1E9306D /* libPods-EyeProtectionAction.a in Frameworks */,
-				44CBE6BA22BC83D300D5507F /* libXG-SDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,8 +164,6 @@
 		4447722B229828260062AEDC /* EyeProtectionAction */ = {
 			isa = PBXGroup;
 			children = (
-				447C23A222B789FA00B3F309 /* EyeProtectionAction.entitlements */,
-				44CBE6B122BC83D300D5507F /* sdk */,
 				A34FC95322B757E600F63D5F /* SystemMacro.h */,
 				44884E3622A61EF00033FBB9 /* pickView */,
 				4447722C229828260062AEDC /* AppDelegate.h */,
@@ -235,15 +228,6 @@
 				44884E4022A61EF00033FBB9 /* MLPickerItem.m */,
 			);
 			path = pickView;
-			sourceTree = "<group>";
-		};
-		44CBE6B122BC83D300D5507F /* sdk */ = {
-			isa = PBXGroup;
-			children = (
-				44CBE6B222BC83D300D5507F /* XGPush.h */,
-				44CBE6B422BC83D300D5507F /* libXG-SDK.a */,
-			);
-			path = sdk;
 			sourceTree = "<group>";
 		};
 		B73952F3E94F73DADFA738FF /* Pods */ = {
@@ -339,10 +323,10 @@
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -641,7 +625,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = EyeProtectionAction/EyeProtectionAction.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJYYAJ3973;
@@ -696,7 +679,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = EyeProtectionAction/EyeProtectionAction.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJYYAJ3973;
