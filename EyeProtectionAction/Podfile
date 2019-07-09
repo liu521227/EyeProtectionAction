@@ -10,7 +10,7 @@ def shared_pods
   pod 'JPush'
   pod 'AFNetworking'
   pod 'SDWebImage'
-  
+  pod 'XHLaunchAd'
 end
 
 target 'EyeProtectionAction' do

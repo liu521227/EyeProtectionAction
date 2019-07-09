@@ -15,7 +15,7 @@
 #endif
 // 如果需要使用 idfa 功能所需要引入的头文件（可选）
 #import <AdSupport/AdSupport.h>
-
+#import <XHLaunchAd/XHLaunchAd.h>
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 
 @end
@@ -49,7 +49,64 @@
                  apsForProduction:YES
 #endif
             advertisingIdentifier:advertisingId];
+    //设置你工程的启动页使用的是:LaunchImage 还是 LaunchScreen.storyboard(不设置默认:LaunchImage)
+    [XHLaunchAd setLaunchSourceType:SourceTypeLaunchImage];
+    //1.因为数据请求是异步的,请在数据请求前,调用下面方法配置数据等待时间.
+    //2.设为3即表示:启动页将停留3s等待服务器返回广告数据,3s内等到广告数据,将正常显示广告,否则将不显示
+    //3.数据获取成功,配置广告数据后,自动结束等待,显示广告
+    //注意:请求广告数据前,必须设置此属性,否则会先进入window的的根控制器
+//    [XHLaunchAd setWaitDataDuration:3];
+    //配置广告数据
+    XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration defaultConfiguration];
+    imageAdconfiguration.duration = 3;
+    NSString *imageName = [self defaultSplashImageMap][[self defaultSplashImageKey]];
+    //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
+    imageAdconfiguration.imageNameOrURLString = [NSString stringWithFormat:@"%@.png",imageName];
+
+    //广告点击打开页面参数(openModel可为NSString,模型,字典等任意类型)
+    imageAdconfiguration.openModel = @"http://www.it7090.com";
+    //显示图片开屏广告
+    [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
     return YES;
+}
+
+- (NSDictionary *) defaultSplashImageMap {
+    return @{@"750*1334":@"LaunchImage-800-667h",
+             @"640*1136":@"LaunchImage-800-Portrait-736h",
+             @"640*960":@"LaunchImage-700",
+             @"1242*2208":@"LaunchImage-800-Portrait-736h",
+             @"1125*2436":@"LaunchImage-1100-Portrait-2436h",
+             @"828*1792":@"LaunchImage-1200-Portrait-1792h",
+             @"1242*2688":@"LaunchImage-1200-Portrait-2688h"};
+}
+
+- (NSString*) defaultSplashImageKey {
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    CGFloat scale = [UIScreen mainScreen].scale;
+    NSString *key = [NSString stringWithFormat:@"%.0f*%.0f",size.width * scale,size.height*scale];
+    return key;
+}
+
+/**
+ 广告点击事件代理方法
+ */
+-(void)xhLaunchAd:(XHLaunchAd *)launchAd clickAndOpenModel:(id)openModel clickPoint:(CGPoint)clickPoint{
+    
+    NSLog(@"广告点击事件");
+    
+    /** openModel即配置广告数据设置的点击广告时打开页面参数(configuration.openModel) */
+    
+    if(openModel==nil) return;
+    
+    NSString *urlString = (NSString *)openModel;
+    
+    //此处跳转页面
+    //WebViewController *VC = [[WebViewController alloc] init];
+    //VC.URLString = urlString;
+    ////此处不要直接取keyWindow
+    //UIViewController* rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
+    //[rootVC.myNavigationController pushViewController:VC animated:YES];
+    
 }
 
 #pragma mark - UIApplicationDelegate

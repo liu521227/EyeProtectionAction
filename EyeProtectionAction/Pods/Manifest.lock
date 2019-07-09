@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - FLAnimatedImage (1.0.12)
   - JCore (2.0.2)
   - JPush (3.2.1):
     - JCore (< 3.0.0, >= 2.0.0)
@@ -27,6 +28,8 @@ PODS:
   - SDWebImage (5.0.6):
     - SDWebImage/Core (= 5.0.6)
   - SDWebImage/Core (5.0.6)
+  - XHLaunchAd (3.9.8):
+    - FLAnimatedImage (~> 1.0.12)
 
 DEPENDENCIES:
   - AFNetworking
@@ -35,10 +38,12 @@ DEPENDENCIES:
   - PGDatePicker
   - RTRootNavigationController
   - SDWebImage
+  - XHLaunchAd
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - FLAnimatedImage
     - JCore
     - JPush
     - Masonry
@@ -46,9 +51,11 @@ SPEC REPOS:
     - PGPickerView
     - RTRootNavigationController
     - SDWebImage
+    - XHLaunchAd
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   JCore: d4cbe6d178eaeb0ed263e42a6ebcb617855ef7cb
   JPush: a1ff8b8ec53fa3419b414946e4db4efa313baeae
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -56,7 +63,8 @@ SPEC CHECKSUMS:
   PGPickerView: 037acfb132a4c8054fb43aaa59a5ff50c7f747f5
   RTRootNavigationController: afa6913402be26f8326f7f37fc1550aa67baddcc
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  XHLaunchAd: 45048592af01aa501c9d2d0c45e95ca74c4d0596
 
-PODFILE CHECKSUM: 0717df445a1a7108521c8bb840b51b1048596116
+PODFILE CHECKSUM: 0398aa06b27552e46efa44eccf04530791fe25b0
 
 COCOAPODS: 1.7.2
