@@ -24,6 +24,9 @@
 		44884E4522A61EF00033FBB9 /* MLPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44884E4022A61EF00033FBB9 /* MLPickerItem.m */; };
 		448DD8BE22994D20003673EA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8BD22994D20003673EA /* BaseViewController.m */; };
 		448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */; };
+		44914D9A22DA0F6F003AEC9B /* topicscreated.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 44914D9922DA0F6E003AEC9B /* topicscreated.com.cer */; };
+		44914D9D22DA1A2C003AEC9B /* EyeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44914D9C22DA1A2C003AEC9B /* EyeWebViewController.m */; };
+		44914DA022DA1EBA003AEC9B /* EyeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44914D9F22DA1EBA003AEC9B /* EyeModel.m */; };
 		44CBE6BE22BC842500D5507F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6BD22BC842500D5507F /* CoreTelephony.framework */; };
 		44CBE6C022BC842F00D5507F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6BF22BC842F00D5507F /* SystemConfiguration.framework */; };
 		44CBE6C222BC843A00D5507F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBE6C122BC843A00D5507F /* UserNotifications.framework */; };
@@ -86,6 +89,11 @@
 		448DD8BD22994D20003673EA /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		448DD8BF22994D5A003673EA /* EyeSelectHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeSelectHeightViewController.h; sourceTree = "<group>"; };
 		448DD8C022994D5A003673EA /* EyeSelectHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeSelectHeightViewController.m; sourceTree = "<group>"; };
+		44914D9922DA0F6E003AEC9B /* topicscreated.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = topicscreated.com.cer; sourceTree = "<group>"; };
+		44914D9B22DA1A2C003AEC9B /* EyeWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeWebViewController.h; sourceTree = "<group>"; };
+		44914D9C22DA1A2C003AEC9B /* EyeWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeWebViewController.m; sourceTree = "<group>"; };
+		44914D9E22DA1EBA003AEC9B /* EyeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeModel.h; sourceTree = "<group>"; };
+		44914D9F22DA1EBA003AEC9B /* EyeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeModel.m; sourceTree = "<group>"; };
 		44C7531122C38103006454B7 /* EyeProtectionAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EyeProtectionAction.entitlements; sourceTree = "<group>"; };
 		44CBE6BD22BC842500D5507F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		44CBE6BF22BC842F00D5507F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -184,6 +192,10 @@
 				44884E3422A53FB00033FBB9 /* EyeStartTestViewController.m */,
 				44FAD49022B67CB20027591A /* EyeTestResultViewController.h */,
 				44FAD49122B67CB20027591A /* EyeTestResultViewController.m */,
+				44914D9B22DA1A2C003AEC9B /* EyeWebViewController.h */,
+				44914D9C22DA1A2C003AEC9B /* EyeWebViewController.m */,
+				44914D9E22DA1EBA003AEC9B /* EyeModel.h */,
+				44914D9F22DA1EBA003AEC9B /* EyeModel.m */,
 				44FAD48A22B659DD0027591A /* EyeTool.h */,
 				44FAD48B22B659DD0027591A /* EyeTool.m */,
 				44477232229828260062AEDC /* Main.storyboard */,
@@ -193,6 +205,7 @@
 				4447723B229828280062AEDC /* main.m */,
 				77B6740222A94DE30086CF0F /* CountLabel.h */,
 				77B6740322A94DE30086CF0F /* CountLabel.m */,
+				44914D9922DA0F6E003AEC9B /* topicscreated.com.cer */,
 			);
 			path = EyeProtectionAction;
 			sourceTree = "<group>";
@@ -367,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44914D9A22DA0F6F003AEC9B /* topicscreated.com.cer in Resources */,
 				447C252422B8CCF700B3F309 /* LaunchScreen.storyboard in Resources */,
 				44477236229828280062AEDC /* Assets.xcassets in Resources */,
 				44477234229828260062AEDC /* Main.storyboard in Resources */,
@@ -437,6 +451,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				448DD8C122994D5A003673EA /* EyeSelectHeightViewController.m in Sources */,
+				44914DA022DA1EBA003AEC9B /* EyeModel.m in Sources */,
+				44914D9D22DA1A2C003AEC9B /* EyeWebViewController.m in Sources */,
 				44884E4322A61EF00033FBB9 /* JXButton.m in Sources */,
 				44477231229828260062AEDC /* ViewController.m in Sources */,
 				448DD8BE22994D20003673EA /* BaseViewController.m in Sources */,

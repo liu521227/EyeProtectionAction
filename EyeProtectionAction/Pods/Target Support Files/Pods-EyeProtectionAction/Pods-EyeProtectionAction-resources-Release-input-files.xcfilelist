@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction-resources.sh
 ${PODS_ROOT}/PGDatePicker/PGDatePicker/PGDatePicker.bundle
+${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle

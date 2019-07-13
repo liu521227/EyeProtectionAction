@@ -10,6 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Eye Web View Controller-->
+        <scene sceneID="nUA-aC-aJt">
+            <objects>
+                <viewController storyboardIdentifier="webViewId" id="Vxg-It-art" customClass="EyeWebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gdr-Iu-O0A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ERo-PG-ZUd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="H5i-Ul-Zqg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgq-am-SY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="87"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
