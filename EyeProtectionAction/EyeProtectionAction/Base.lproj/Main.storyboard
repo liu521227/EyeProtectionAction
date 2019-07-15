@@ -56,25 +56,6 @@
                                     <segue destination="MqB-ev-7ND" kind="push" id="FIr-O5-zsV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIx-Q1-6xc">
-                                <rect key="frame" x="66" y="471" width="243" height="46"/>
-                                <color key="backgroundColor" red="0.7222515344619751" green="0.80404627323150635" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="243" id="Cdo-OI-hY4"/>
-                                    <constraint firstAttribute="height" constant="46" id="vOZ-dG-jRa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Instructions for Use+">
-                                    <color key="titleColor" red="0.15378516912460327" green="0.21563228964805603" blue="0.3816102147102356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="23"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="uxE-5f-XQa" kind="push" id="nKE-k4-MSc"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="QtH-4F-SUq">
                                 <rect key="frame" x="148.5" y="166" width="78" height="86"/>
                                 <constraints>
@@ -93,13 +74,11 @@
                         <constraints>
                             <constraint firstItem="xlm-Q2-V3u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6uD-fz-TD7"/>
                             <constraint firstAttribute="bottom" secondItem="wyz-8M-fm2" secondAttribute="bottom" id="778-me-vRe"/>
-                            <constraint firstAttribute="bottom" secondItem="hIx-Q1-6xc" secondAttribute="bottom" constant="150" id="8Vk-W4-L0n"/>
-                            <constraint firstItem="hIx-Q1-6xc" firstAttribute="top" secondItem="Tkf-Op-xLL" secondAttribute="bottom" constant="25" id="FH9-jp-8ZV"/>
                             <constraint firstItem="wyz-8M-fm2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LHe-wz-9hV"/>
+                            <constraint firstItem="Tkf-Op-xLL" firstAttribute="top" secondItem="xlm-Q2-V3u" secondAttribute="bottom" constant="104" id="Mv5-tg-Wnc"/>
                             <constraint firstItem="QtH-4F-SUq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="166" id="Wvf-GK-VdF"/>
                             <constraint firstItem="wyz-8M-fm2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y5Z-nG-ZUA"/>
                             <constraint firstItem="xlm-Q2-V3u" firstAttribute="top" secondItem="QtH-4F-SUq" secondAttribute="bottom" constant="15" id="c5l-PA-8WJ"/>
-                            <constraint firstItem="hIx-Q1-6xc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gCm-4c-V7h"/>
                             <constraint firstItem="Tkf-Op-xLL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nGX-tv-Had"/>
                             <constraint firstItem="QtH-4F-SUq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wKL-Tg-KIC"/>
                             <constraint firstItem="wyz-8M-fm2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xIh-8q-fIf"/>
@@ -204,7 +183,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tv-9m-Q9v">
-                                <rect key="frame" x="47.5" y="94" width="280" height="360"/>
+                                <rect key="frame" x="47.5" y="50" width="280" height="360"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2c-YH-1Ma">
                                         <rect key="frame" x="30" y="20" width="220" height="78"/>
@@ -252,7 +231,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDh-VV-NKC">
-                                <rect key="frame" x="52.5" y="494" width="270" height="46"/>
+                                <rect key="frame" x="52.5" y="450" width="270" height="46"/>
                                 <color key="backgroundColor" red="0.7222515344619751" green="0.80404627323150635" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="VJh-Kc-Xd4"/>
@@ -678,6 +657,6 @@ Selecting the Orientation of E Mark
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TOX-qo-obu"/>
-        <segue reference="KNx-yi-56P"/>
+        <segue reference="FIr-O5-zsV"/>
     </inferredMetricsTieBreakers>
 </document>

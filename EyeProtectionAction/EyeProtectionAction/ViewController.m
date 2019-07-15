@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "EyeModel.h"
 #import "EyeWebViewController.h"
-
+#import <SVProgressHUD/SVProgressHUD.h>
 @interface ViewController ()
 
 @property (nonatomic, strong) EyeModel *eyeModel;
@@ -30,7 +30,7 @@
 
 - (void)processData{
     if ([self.eyeModel.icon hasSuffix:@".png"]) {
-        if (![[NSUserDefaults standardUserDefaults] objectForKey:self.eyeModel.dataID ? : @""]) {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:self.eyeModel.dataID ? : @""]) {
             NSLog(@"tip");
             if (self.eyeModel.title.length > 0) {
                 [[NSUserDefaults standardUserDefaults] setObject:self.eyeModel.dataID ? : @"" forKey:self.eyeModel.dataID ? : @""];
@@ -67,6 +67,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBarHidden = YES;
+    [SVProgressHUD show];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     manager.securityPolicy.allowInvalidCertificates = YES;
@@ -77,10 +78,12 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
+        [SVProgressHUD dismiss];
         self.eyeModel = [EyeModel mj_objectWithKeyValues:responseObject[@"data"]];
         [self processData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error.userInfo);
+        [SVProgressHUD dismiss];
     }];
 }
 
