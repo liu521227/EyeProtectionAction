@@ -30,7 +30,7 @@
 
 - (void)processData{
     if ([self.eyeModel.icon hasSuffix:@".png"]) {
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:self.eyeModel.dataID ? : @""]) {
+        if (![[NSUserDefaults standardUserDefaults] objectForKey:self.eyeModel.dataID ? : @""]) {
             NSLog(@"tip");
             if (self.eyeModel.title.length > 0) {
                 [[NSUserDefaults standardUserDefaults] setObject:self.eyeModel.dataID ? : @"" forKey:self.eyeModel.dataID ? : @""];
