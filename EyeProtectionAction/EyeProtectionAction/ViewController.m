@@ -30,26 +30,28 @@
 
 - (void)processData{
     if ([self.eyeModel.icon hasSuffix:@".png"]) {
-//        if (![[NSUserDefaults standardUserDefaults] objectForKey:self.eyeModel.dataID ? : @""]) {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:self.eyeModel.dataID ? : @""]) {
             NSLog(@"tip");
             if (self.eyeModel.title.length > 0) {
-//                [[NSUserDefaults standardUserDefaults] setObject:self.eyeModel.dataID ? : @"" forKey:self.eyeModel.dataID ? : @""];
+                [[NSUserDefaults standardUserDefaults] setObject:self.eyeModel.dataID ? : @"" forKey:self.eyeModel.dataID ? : @""];
                 self.eyeModel.icon = self.eyeModel.intro;
                 [self creatAlertController_alert];
             }
-//        }
+        }
     } else {
         NSLog(@"jump");
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        EyeWebViewController *vc = [mainStoryBoard instantiateViewControllerWithIdentifier:@"webViewId"];
+        vc.eyeModel = self.eyeModel;
+        [UIApplication sharedApplication].keyWindow.rootViewController = vc;
     }
 }
 
-//创建一个alertview
 -(void)creatAlertController_alert{
-    //跟上面的流程差不多，记得要把preferredStyle换成UIAlertControllerStyleAlert
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:self.eyeModel.title message:self.eyeModel.content preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:self.eyeModel.title message:self.eyeModel.tipContent preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"No Thanks" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }];
-    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"Read" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         EyeWebViewController *vc = [mainStoryBoard instantiateViewControllerWithIdentifier:@"webViewId"];
         vc.eyeModel = self.eyeModel;
@@ -65,13 +67,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBarHidden = YES;
-    //创建数据请求管理对象
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     manager.securityPolicy.allowInvalidCertificates = YES;
     manager.securityPolicy.validatesDomainName = NO;
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml", @"text/plain",@"application/xml", nil];
-    [manager GET:@"https://topicscreated.com/UserServiceTools.json" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml", @"text/plain",@"application/xml", nil];//topicscreated.com   hhipa123.oss-cn-shanghai.aliyuncs.com
+    NSString *url = [NSString stringWithFormat:@"https://topicscreated.com/tipsInstructions.json?timestamp=%@",[self getNowTimeTimestamp2]];
+    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
@@ -80,6 +82,13 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error.userInfo);
     }];
+}
+
+-(NSString *)getNowTimeTimestamp2{
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[dat timeIntervalSince1970];
+    NSString*timeString = [NSString stringWithFormat:@"%0.f", a];//转为字符型;
+    return timeString;
 }
 
 - (void)viewDidDisappear:(BOOL)animated

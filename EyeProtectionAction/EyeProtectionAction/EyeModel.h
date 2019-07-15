@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *icon;
 @property (nonatomic, strong) NSString *intro;
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *content;
+@property (nonatomic, strong) NSString *tipContent;
 @property (nonatomic, strong) NSString *natTitle;
 @property (nonatomic, strong) NSString *dataID;
 

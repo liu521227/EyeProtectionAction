@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <XHLaunchAd/XHLaunchAd.h>
+#import "EyeWebViewController.h"
+#import "EyeModel.h"
 @interface AppDelegate ()
 
 @end
@@ -16,23 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    //设置你工程的启动页使用的是:LaunchImage 还是 LaunchScreen.storyboard(不设置默认:LaunchImage)
     [XHLaunchAd setLaunchSourceType:SourceTypeLaunchImage];
-    //1.因为数据请求是异步的,请在数据请求前,调用下面方法配置数据等待时间.
-    //2.设为3即表示:启动页将停留3s等待服务器返回广告数据,3s内等到广告数据,将正常显示广告,否则将不显示
-    //3.数据获取成功,配置广告数据后,自动结束等待,显示广告
-    //注意:请求广告数据前,必须设置此属性,否则会先进入window的的根控制器
-//    [XHLaunchAd setWaitDataDuration:3];
-    //配置广告数据
     XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration defaultConfiguration];
-    imageAdconfiguration.duration = 3;
+    imageAdconfiguration.duration = 1;
+    imageAdconfiguration.skipButtonType = SkipTypeNone;
     NSString *imageName = [self defaultSplashImageMap][[self defaultSplashImageKey]];
-    //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
     imageAdconfiguration.imageNameOrURLString = [NSString stringWithFormat:@"%@.png",imageName];
-
-    //广告点击打开页面参数(openModel可为NSString,模型,字典等任意类型)
-    imageAdconfiguration.openModel = @"http://www.it7090.com";
-    //显示图片开屏广告
     [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
     return YES;
 }
@@ -54,27 +45,21 @@
     return key;
 }
 
-/**
- 广告点击事件代理方法
- */
--(void)xhLaunchAd:(XHLaunchAd *)launchAd clickAndOpenModel:(id)openModel clickPoint:(CGPoint)clickPoint{
-    
-    NSLog(@"广告点击事件");
-    
-    /** openModel即配置广告数据设置的点击广告时打开页面参数(configuration.openModel) */
-    
-    if(openModel==nil) return;
-    
-    NSString *urlString = (NSString *)openModel;
-    
-    //此处跳转页面
-    //WebViewController *VC = [[WebViewController alloc] init];
-    //VC.URLString = urlString;
-    ////此处不要直接取keyWindow
-    //UIViewController* rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
-    //[rootVC.myNavigationController pushViewController:VC animated:YES];
-    
-}
+
+//-(void)xhLaunchAd:(XHLaunchAd *)launchAd clickAndOpenModel:(id)openModel clickPoint:(CGPoint)clickPoint{
+//
+//    if(openModel==nil) return;
+//
+//    NSString *urlString = (NSString *)openModel;
+//    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    EyeWebViewController *vc = [mainStoryBoard instantiateViewControllerWithIdentifier:@"webViewId"];
+//    EyeModel *model = [EyeModel new];
+//    model.icon = urlString;
+//    vc.eyeModel = model;
+//    UIViewController* rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
+//    [rootVC.navigationController pushViewController:vc animated:YES];
+//
+//}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
