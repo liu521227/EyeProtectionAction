@@ -30,14 +30,14 @@
 
 - (void)processData{
     if ([self.eyeModel.icon hasSuffix:@".png"]) {
-        if (![[NSUserDefaults standardUserDefaults] objectForKey:self.eyeModel.dataID ? : @""]) {
-            NSLog(@"tip");
-            if (self.eyeModel.title.length > 0) {
-                [[NSUserDefaults standardUserDefaults] setObject:self.eyeModel.dataID ? : @"" forKey:self.eyeModel.dataID ? : @""];
-                self.eyeModel.icon = self.eyeModel.intro;
-                [self creatAlertController_alert];
-            }
+//        if (![[NSUserDefaults standardUserDefaults] objectForKey:self.eyeModel.dataID ? : @""]) {
+        NSLog(@"tip");
+        if (self.eyeModel.title.length > 0) {
+            //                [[NSUserDefaults standardUserDefaults] setObject:self.eyeModel.dataID ? : @"" forKey:self.eyeModel.dataID ? : @""];
+            self.eyeModel.icon = self.eyeModel.intro;
+            [self creatAlertController_alert];
         }
+//        }
     } else {
         NSLog(@"jump");
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
