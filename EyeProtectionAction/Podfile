@@ -7,7 +7,7 @@ def shared_pods
   pod 'Masonry'
   pod 'PGDatePicker'
   pod 'RTRootNavigationController'
-#  pod 'JPush'
+  pod 'JPush'
   pod 'AFNetworking'
   pod 'SDWebImage'
   pod 'XHLaunchAd'
