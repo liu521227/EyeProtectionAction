@@ -48,7 +48,6 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "Default@2x~iphone.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
@@ -79,7 +78,6 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "Default-568h@2x~iphone.png",
       "extent" : "full-screen",
       "subtype" : "retina4",
       "scale" : "2x"

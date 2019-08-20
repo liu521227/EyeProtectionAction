@@ -37,6 +37,7 @@
 		44FFEB0A22A11B4300A0C07D /* EyeInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FFEB0922A11B4300A0C07D /* EyeInstructionsViewController.m */; };
 		44FFEB0D22A11B9200A0C07D /* EyePreparationTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FFEB0C22A11B9200A0C07D /* EyePreparationTestViewController.m */; };
 		77B6740422A94DE30086CF0F /* CountLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B6740322A94DE30086CF0F /* CountLabel.m */; };
+		A38956BC230BDD7800A17C4D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A38956BE230BDD7800A17C4D /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,19 @@
 		7D151DD5C0AC372934661AB1 /* Pods-EyeProtectionAction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeProtectionAction.release.xcconfig"; path = "Pods/Target Support Files/Pods-EyeProtectionAction/Pods-EyeProtectionAction.release.xcconfig"; sourceTree = "<group>"; };
 		A33CA09222B8ED41009396B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A34FC95322B757E600F63D5F /* SystemMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMacro.h; sourceTree = "<group>"; };
+		A38956B4230BDD4600A17C4D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		A38956B5230BDD4600A17C4D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A38956B6230BDD5800A17C4D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		A38956B7230BDD5800A17C4D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A38956B8230BDD6000A17C4D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		A38956B9230BDD6000A17C4D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A38956BA230BDD6800A17C4D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		A38956BB230BDD6800A17C4D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A38956BD230BDD7800A17C4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A38956BF230BDD7D00A17C4D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A38956C0230BDD7E00A17C4D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A38956C1230BDD7F00A17C4D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A38956C2230BDD8000A17C4D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +165,7 @@
 		44477220229828260062AEDC = {
 			isa = PBXGroup;
 			children = (
+				A38956BE230BDD7800A17C4D /* InfoPlist.strings */,
 				4447722B229828260062AEDC /* EyeProtectionAction */,
 				44477244229828280062AEDC /* EyeProtectionActionTests */,
 				4447724F229828280062AEDC /* EyeProtectionActionUITests */,
@@ -362,6 +377,10 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ja,
+				ko,
+				fr,
 			);
 			mainGroup = 44477220229828260062AEDC;
 			productRefGroup = 4447722A229828260062AEDC /* Products */;
@@ -384,6 +403,7 @@
 				447C252422B8CCF700B3F309 /* LaunchScreen.storyboard in Resources */,
 				44477236229828280062AEDC /* Assets.xcassets in Resources */,
 				44477234229828260062AEDC /* Main.storyboard in Resources */,
+				A38956BC230BDD7800A17C4D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +528,10 @@
 			children = (
 				44477233229828260062AEDC /* Base */,
 				A33CA09222B8ED41009396B4 /* en */,
+				A38956B4230BDD4600A17C4D /* zh-Hans */,
+				A38956B6230BDD5800A17C4D /* ja */,
+				A38956B8230BDD6000A17C4D /* ko */,
+				A38956BA230BDD6800A17C4D /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -516,8 +540,24 @@
 			isa = PBXVariantGroup;
 			children = (
 				447C252322B8CCF400B3F309 /* Base */,
+				A38956B5230BDD4600A17C4D /* zh-Hans */,
+				A38956B7230BDD5800A17C4D /* ja */,
+				A38956B9230BDD6000A17C4D /* ko */,
+				A38956BB230BDD6800A17C4D /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A38956BE230BDD7800A17C4D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A38956BD230BDD7800A17C4D /* en */,
+				A38956BF230BDD7D00A17C4D /* zh-Hans */,
+				A38956C0230BDD7E00A17C4D /* ja */,
+				A38956C1230BDD7F00A17C4D /* ko */,
+				A38956C2230BDD8000A17C4D /* fr */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
