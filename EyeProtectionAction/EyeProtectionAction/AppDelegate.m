@@ -36,7 +36,6 @@
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|JPAuthorizationOptionProvidesAppNotificationSettings;
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     [JPUSHService setupWithOption:launchOptions appKey:@"e542338f75bb8224ddde6fc5"
                           channel:@"App Store"
 #if DEBUG
@@ -44,7 +43,8 @@
 #else
                  apsForProduction:YES
 #endif
-            advertisingIdentifier:advertisingId];
+            advertisingIdentifier:nil];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     return YES;
 }
 
@@ -54,7 +54,7 @@
              @"640*960":@"LaunchImage-700",
              @"1242*2208":@"LaunchImage-800-Portrait-736h",
              @"1125*2436":@"LaunchImage-1100-Portrait-2436h",
-             @"828*1792":@"LaunchImage-1200-Portrait-1792h",
+             @"828*1792":@"LaunchImage-1200-Portrait-1792h@2x",
              @"1242*2688":@"LaunchImage-1200-Portrait-2688h"};
 }
 
@@ -108,6 +108,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Required
     NSDictionary * userInfo = notification.request.content.userInfo;
     if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
         [JPUSHService handleRemoteNotification:userInfo];
     }
     completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有 Badge、Sound、Alert 三种类型可以选择设置
@@ -118,20 +119,21 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Required
     NSDictionary * userInfo = response.notification.request.content.userInfo;
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
         [JPUSHService handleRemoteNotification:userInfo];
     }
     completionHandler();  // 系统要求执行这个方法
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     // Required, iOS 7 Support
     [JPUSHService handleRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     // Required, For systems with less than or equal to iOS 6
     [JPUSHService handleRemoteNotification:userInfo];
 }
