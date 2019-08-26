@@ -2,7 +2,7 @@
 //  EyeSelectHeightViewController.m
 //  EyeProtectionAction
 //
-//  Created by 秦晓康 on 2019/5/25.
+//  Created by qxk on 2019/5/25.
 //  Copyright © 2019 qxk. All rights reserved.
 //
 
@@ -95,13 +95,12 @@
     return self.dataArr.count;
 }
 
-//列显示的数据
+
 - (NSString *)pickerView:(PGPickerView *)pickerView titleForRow:(NSInteger) row forComponent:(NSInteger)component {
     return self.dataArr[row];
 }
 
 #pragma mark - delegate
-// 选中某一组的某一行
 - (void)pickerView:(PGPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     self.titleL.text = self.dataArr[row];
 }

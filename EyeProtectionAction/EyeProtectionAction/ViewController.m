@@ -2,7 +2,7 @@
 //  ViewController.m
 //  EyeProtectionAction
 //
-//  Created by 秦晓康 on 2019/5/24.
+//  Created by qxk on 2019/5/24.
 //  Copyright © 2019 qxk. All rights reserved.
 //
 
@@ -90,7 +90,7 @@
 -(NSString *)getNowTimeTimestamp2{
     NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
     NSTimeInterval a=[dat timeIntervalSince1970];
-    NSString*timeString = [NSString stringWithFormat:@"%0.f", a];//转为字符型;
+    NSString*timeString = [NSString stringWithFormat:@"%0.f", a];;
     return timeString;
 }
 

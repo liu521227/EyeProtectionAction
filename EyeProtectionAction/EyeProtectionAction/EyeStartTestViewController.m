@@ -2,7 +2,7 @@
 //  EyeStartTestViewController.m
 //  EyeProtectionAction
 //
-//  Created by 秦晓康 on 2019/6/3.
+//  Created by qxk on 2019/6/3.
 //  Copyright © 2019 qxk. All rights reserved.
 //
 
@@ -40,14 +40,8 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, strong) NSMutableDictionary *resultDic;
 
-/**
- 当前数据
- */
 @property (nonatomic, strong) NSDictionary *selectDataDic;
 
-/**
- 当前位置
- */
 @property (nonatomic, assign) NSInteger selectIndex;
 
 @property (nonatomic, strong) NSMutableArray *imageEArray;
@@ -145,7 +139,7 @@ typedef enum : NSUInteger {
     self.imageData = imageData;
     
     CGFloat withH = (self.view.frame.size.width - 42 - 106) / 5;
-    // 2.初始化
+    // 2.init
     self.pickerScollView = [[MLPickerScrollView alloc] init];
     _pickerScollView.itemWidth = withH; //刚好显示5个的宽度
     _pickerScollView.itemHeight = withH;
@@ -162,7 +156,7 @@ typedef enum : NSUInteger {
     
     self.bgView.layer.borderWidth = 2;
     self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
-    // 3.刷新数据
+    // 3.load
     [_pickerScollView reloadData];
     _pickerScollView.seletedIndex = 0;
     [_pickerScollView scollToSelectdIndex:0];
@@ -219,7 +213,6 @@ typedef enum : NSUInteger {
 - (IBAction)clickInvisibilityBtn:(UIButton *)sender {
     if ([EyeTool sharedSingleton].isLeftEye == NO) {
         [EyeTool sharedSingleton].isLeftEye = YES;
-        NSLog(@"开始左眼测试");
         [EyeTool sharedSingleton].testResultDic[@"rightTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
         [self performSegueWithIdentifier:@"seleteEye"sender:self];
     } else {
@@ -235,7 +228,6 @@ typedef enum : NSUInteger {
             }
         }
         [EyeTool sharedSingleton].testResultDic[@"leftTestResul"] = [NSString stringWithFormat:@"%@",((MLDemoModel *)self.data[self.selectIndex]).dicountTitle];
-        NSLog(@"结束");
         [self performSegueWithIdentifier:@"EyeTestResult"sender:self];
     }
 }
@@ -252,10 +244,6 @@ typedef enum : NSUInteger {
     [self chooseCheck:(EyeImageOrientationTypeBottom)];
 }
 
-/**
-选择校验
- @param imageOrientationType 选择方向
- */
 - (void)chooseCheck:(EyeImageOrientationType)imageOrientationType{
     NSInteger nextIndex;
     if ([self.selectDataDic[@"orientation"] integerValue] == imageOrientationType) {

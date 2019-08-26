@@ -2,7 +2,7 @@
 //  EyeInstructionsViewController.m
 //  EyeProtectionAction
 //
-//  Created by 秦晓康 on 2019/5/31.
+//  Created by qxk on 2019/5/31.
 //  Copyright © 2019 qxk. All rights reserved.
 //
 

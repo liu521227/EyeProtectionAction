@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  EyeProtectionAction
 //
-//  Created by 秦晓康 on 2019/5/24.
+//  Created by qxk on 2019/5/24.
 //  Copyright © 2019 qxk. All rights reserved.
 //
 
@@ -10,13 +10,10 @@
 #import <XHLaunchAd/XHLaunchAd.h>
 #import "EyeWebViewController.h"
 #import "EyeModel.h"
-// 引入 JPush 功能所需头文件
 #import "JPUSHService.h"
-// iOS10 注册 APNs 所需头文件
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
-// 如果需要使用 idfa 功能所需要引入的头文件（可选）
 #import <AdSupport/AdSupport.h>
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 
@@ -85,7 +82,7 @@
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
-    /// Required - 注册 DeviceToken
+    /// Required - DeviceToken
     [JPUSHService registerDeviceToken:deviceToken];
 }
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
@@ -97,9 +94,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 // iOS 12 Support
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification{
     if (notification && [notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        //从通知界面直接进入应用
     }else{
-        //从通知设置界面进入应用
     }
 }
 
@@ -111,7 +106,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
         [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
         [JPUSHService handleRemoteNotification:userInfo];
     }
-    completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有 Badge、Sound、Alert 三种类型可以选择设置
+    completionHandler(UNNotificationPresentationOptionAlert);
 }
 
 // iOS 10 Support
@@ -122,7 +117,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
         [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
         [JPUSHService handleRemoteNotification:userInfo];
     }
-    completionHandler();  // 系统要求执行这个方法
+    completionHandler();
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {

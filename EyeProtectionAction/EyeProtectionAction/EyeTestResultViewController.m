@@ -2,7 +2,7 @@
 //  EyeTestResultViewController.m
 //  EyeProtectionAction
 //
-//  Created by 秦晓康 on 2019/6/16.
+//  Created by qxk on 2019/6/16.
 //  Copyright © 2019年 qxk. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  BaseViewController.m
 //  EyeProtectionAction
 //
-//  Created by 秦晓康 on 2019/5/25.
+//  Created by qxk on 2019/5/25.
 //  Copyright © 2019 qxk. All rights reserved.
 //
 
