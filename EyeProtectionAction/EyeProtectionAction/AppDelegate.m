@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <XHLaunchAd/XHLaunchAd.h>
 #import "EyeWebViewController.h"
 #import "EyeModel.h"
 #import "JPUSHService.h"
@@ -22,13 +21,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [XHLaunchAd setLaunchSourceType:SourceTypeLaunchImage];
-    XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration defaultConfiguration];
-    imageAdconfiguration.duration = 1;
-    imageAdconfiguration.skipButtonType = SkipTypeNone;
-    NSString *imageName = [self defaultSplashImageMap][[self defaultSplashImageKey]];
-    imageAdconfiguration.imageNameOrURLString = [NSString stringWithFormat:@"%@.png",imageName];
-    [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
     //Required
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|JPAuthorizationOptionProvidesAppNotificationSettings;
@@ -44,39 +36,6 @@
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     return YES;
 }
-
-- (NSDictionary *) defaultSplashImageMap {
-    return @{@"750*1334":@"LaunchImage-800-667h",
-             @"640*1136":@"LaunchImage-800-Portrait-736h",
-             @"640*960":@"LaunchImage-700",
-             @"1242*2208":@"LaunchImage-800-Portrait-736h",
-             @"1125*2436":@"LaunchImage-1100-Portrait-2436h",
-             @"828*1792":@"LaunchImage-1200-Portrait-1792h@2x",
-             @"1242*2688":@"LaunchImage-1200-Portrait-2688h"};
-}
-
-- (NSString*) defaultSplashImageKey {
-    CGSize size = [UIScreen mainScreen].bounds.size;
-    CGFloat scale = [UIScreen mainScreen].scale;
-    NSString *key = [NSString stringWithFormat:@"%.0f*%.0f",size.width * scale,size.height*scale];
-    return key;
-}
-
-
-//-(void)xhLaunchAd:(XHLaunchAd *)launchAd clickAndOpenModel:(id)openModel clickPoint:(CGPoint)clickPoint{
-//
-//    if(openModel==nil) return;
-//
-//    NSString *urlString = (NSString *)openModel;
-//    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    EyeWebViewController *vc = [mainStoryBoard instantiateViewControllerWithIdentifier:@"webViewId"];
-//    EyeModel *model = [EyeModel new];
-//    model.icon = urlString;
-//    vc.eyeModel = model;
-//    UIViewController* rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
-//    [rootVC.navigationController pushViewController:vc animated:YES];
-//
-//}
 
 #pragma mark - UIApplicationDelegate
 - (void)application:(UIApplication *)application

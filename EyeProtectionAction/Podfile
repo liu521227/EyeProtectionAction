@@ -9,8 +9,8 @@ def shared_pods
   pod 'RTRootNavigationController'
   pod 'JPush'
   pod 'AFNetworking'
-  pod 'SDWebImage'
-  pod 'XHLaunchAd'
+#  pod 'SDWebImage'
+#  pod 'XHLaunchAd'
   pod 'MJExtension'
   pod 'SVProgressHUD'
 
